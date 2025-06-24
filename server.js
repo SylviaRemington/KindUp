@@ -14,6 +14,7 @@ const mongoose = require('mongoose');
 
 
 // ------------------------MONGOOSE CONNECT METHOD------------------------------------------
+
 // MongoDB Connection - connection to the database //also connecting via mongoose gives more feedback vs try catch 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('connected', () => {
