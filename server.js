@@ -18,8 +18,8 @@ const port = 3000;
 
 // HOMEPAGE ROUTE
 app.get('/', async (req, res) => {
-    res.send('Hello, friend! This will be our homepage once it has been set up!');
-    // res.render('index.ejs'); 
+    // res.send('Hello, friend! This will be our homepage once it has been set up!');
+    res.render('index.ejs'); 
 });
 
 
