@@ -1,0 +1,4 @@
+.env
+node_modules
+.DS_Store
+# .DS_Store is a Mac system file that always gets thrown in there, so adding this so that have less data sent to github.
