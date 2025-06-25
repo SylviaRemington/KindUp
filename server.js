@@ -10,6 +10,7 @@ const app = express(); // creating the app using express so can build out routes
 const port = 3000;
 // Don't need to require ejs because express automatically is designed to find it. (I think this is correct, but need to double check.)
 const mongoose = require('mongoose');
+const KindAct = require('./models/KindAct'); //importing the model into server.js
 
 
 
