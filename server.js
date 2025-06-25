@@ -113,9 +113,12 @@ kindness that people would really dig receiving.
 
 
 /*
+
 Have a page list of KindActs you haven't done yet.
 Have a page list of completed KindActs you've already done... with maybe a point system. 
 After a certain amount of points, you win something awesome like a trip somewhere or a spa day or something. 
 Give people an incentive to be kind until they actually be more kind.
+
+Have a page of a comments section where you SHARE AN ACT OF KINDNESS you've witnessed in your day.
 
 */
