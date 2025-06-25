@@ -11,16 +11,19 @@ const mongoose = require('mongoose');
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
 
+
 // -----------------------------PORT SETUP-------------------------------------------------
 
 const port = process.env.PORT || 3000;
-// This (process.env.PORT) means that It is processing/running the environment variable settings on Port 3000.
+// This (process.env.PORT) means that it is processing/running the environment variable settings on Port 3000.
+
 
 
 // -----------------------------APP SETUP-------------------------------------------------
 // App needs to come after the imports because it uses code from the imports.
 
 const app = express(); // creating the app using express so can build out routes, handle requests & send responses
+
 
 
 // ------------------------MONGOOSE CONNECT METHOD-----------------------------------------
@@ -31,7 +34,10 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 });
 
+
+
 // -----------------------------MIDDLEWARE-------------------------------------------------
+
 
 
 // -----------------------------ROUTES-----------------------------------------------------
