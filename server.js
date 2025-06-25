@@ -93,3 +93,20 @@ app.listen(port, () => {
 // app.listen(port, () => {
 //   console.log(`Listening on port ${port}`);
 // });
+
+
+// -----------------------------IDEAS----------------------------------------------------
+
+/*
+
+How would i do this or add this in my app?
+
+IDEA: Random Acts of Kindness - A smartphone scavenger hunt where teams or indivs
+race to complete 60+ good-deed-challenges - like bagging someone else's groceries,
+sharing inspiring notes, or helping someone move. That would be hilarious if you're 
+trying to do good and then people are like what the... like they actually didn't want
+their groceries bagged by a random stranger. I think i need to find actual acts of 
+kindness that people would really dig receiving.
+
+
+*/
