@@ -10,17 +10,18 @@ const express = require('express');
 const mongoose = require('mongoose');
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
+
+// -----------------------------PORT SETUP-------------------------------------------------
+
 const port = 3000;
 
- // -----------------------------APP ------------------------------------------------------
+ // -----------------------------APP SETUP-------------------------------------------------
  // App needs to come after the imports because it uses code from the imports.
 
 const app = express(); // creating the app using express so can build out routes, handle requests & send responses
 
 
-
-
-// ------------------------MONGOOSE CONNECT METHOD------------------------------------------
+// ------------------------MONGOOSE CONNECT METHOD-----------------------------------------
 
 // MongoDB Connection - connection to the database //also connecting via mongoose gives more feedback vs try catch 
 mongoose.connect(process.env.MONGODB_URI);
