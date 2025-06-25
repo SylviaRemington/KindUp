@@ -29,7 +29,7 @@ const app = express(); // creating the app using express so can build out routes
 
 // ------------------------MONGOOSE CONNECT METHOD-----------------------------------------
 
-// MongoDB Connection - connection to the database //also connecting via mongoose gives more feedback vs try catch 
+// MongoDB Connection - connection to the MongoDB database //also connecting via mongoose gives more feedback vs try catch 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
