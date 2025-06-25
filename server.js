@@ -16,6 +16,7 @@ const KindAct = require('./models/KindAct.js'); //importing the model into serve
 
 const port = process.env.PORT || 3000;
 // This (process.env.PORT) means that it is processing/running the environment variable settings on Port 3000.
+// Also, if nothing is in the .ev file under PORT= , it will default to 3000.
 
 
 
