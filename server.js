@@ -6,7 +6,7 @@
 const dotenv = require('dotenv');
 dotenv.config(); //putting dotenv at top & this gives us access to process.env.MONGODB_URI
 const express = require('express');
-// Don't need to require ejs because express automatically is designed to find it. (I think this is correct, but need to double check.)
+// EJS - don't need to require ejs because express automatically is designed to find it. (I think this is correct, but need to double check.)
 const mongoose = require('mongoose');
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
