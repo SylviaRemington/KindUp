@@ -1,16 +1,22 @@
 // KindUp App - creating random acts of kindness & upleveling the world
 
- 
+
 // -----------------------------IMPORTS----------------------------------------------------
 
 const dotenv = require('dotenv');
 dotenv.config(); //putting dotenv at top & this gives us access to process.env.MONGODB_URI
 const express = require('express');
-const app = express(); // creating the app using express so can build out routes, handle requests & send responses
-const port = 3000;
 // Don't need to require ejs because express automatically is designed to find it. (I think this is correct, but need to double check.)
 const mongoose = require('mongoose');
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
+
+const port = 3000;
+
+ // -----------------------------APP ------------------------------------------------------
+ // App needs to come after the imports because it uses code from the imports.
+
+const app = express(); // creating the app using express so can build out routes, handle requests & send responses
+
 
 
 
@@ -22,6 +28,7 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 });
 
+// -----------------------------MIDDLEWARE-------------------------------------------------
 
 
 // -----------------------------ROUTES-----------------------------------------------------
@@ -44,3 +51,35 @@ app.get('/', async (req, res) => {
 app.listen(process.env.PORT, () => {
   console.log(`Listening on port ${process.env.PORT}`);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------CODE GRAVEYARD---------------------------------------------
+
+// CAN USE THIS BELOW INSTEAD OF WHAT I HAVE ABOVE IN THE FUTURE IF I WANT TO:
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// });
