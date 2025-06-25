@@ -13,10 +13,12 @@ const KindAct = require('./models/KindAct.js'); //importing the model into serve
 
 // -----------------------------PORT SETUP-------------------------------------------------
 
-const port = 3000;
+const port = process.env.PORT || 3000;
+// This (process.env.PORT) means that It is processing/running the environment variable settings on Port 3000.
 
- // -----------------------------APP SETUP-------------------------------------------------
- // App needs to come after the imports because it uses code from the imports.
+
+// -----------------------------APP SETUP-------------------------------------------------
+// App needs to come after the imports because it uses code from the imports.
 
 const app = express(); // creating the app using express so can build out routes, handle requests & send responses
 
@@ -49,8 +51,8 @@ app.get('/', async (req, res) => {
 
 // ----------Starts the app and tells it to listen for requests on PORT (3000)-------------
 
-app.listen(process.env.PORT, () => {
-  console.log(`Listening on port ${process.env.PORT}`);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 
 
