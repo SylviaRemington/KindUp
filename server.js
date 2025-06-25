@@ -1,4 +1,4 @@
-// KindUp App - creating random acts of kindness & upleveling the world
+// KindUp App - An app for creating random acts of kindness & upleveling the world
 
 
 // -----------------------------IMPORTS----------------------------------------------------
