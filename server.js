@@ -81,20 +81,6 @@ app.listen(port, () => {
 
 
 
-
-
-
-
-
-// -----------------------------CODE GRAVEYARD---------------------------------------------
-
-// CAN USE THIS BELOW INSTEAD OF WHAT I HAVE ABOVE IN THE FUTURE IF I WANT TO:
-// const port = process.env.PORT || 3000;
-// app.listen(port, () => {
-//   console.log(`Listening on port ${port}`);
-// });
-
-
 // -----------------------------IDEAS----------------------------------------------------
 
 /*
@@ -122,3 +108,16 @@ Give people an incentive to be kind until they actually be more kind.
 Have a page of a comments section where you SHARE AN ACT OF KINDNESS you've witnessed in your day.
 
 */
+
+
+
+
+// -----------------------------CODE GRAVEYARD---------------------------------------------
+
+// CAN USE THIS BELOW INSTEAD OF WHAT I HAVE ABOVE IN THE FUTURE IF I WANT TO:
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => {
+//   console.log(`Listening on port ${port}`);
+// });
+
+
