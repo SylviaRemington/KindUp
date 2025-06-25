@@ -5,4 +5,12 @@ const kindActSchema = new mongoose.Schema({
   description: String
 });
 
-module.exports = mongoose.model('KindAct', kindActSchema);
+// Defining the model:
+const KindAct = mongoose.model('KindAct', kindActSchema);
+
+// Exporting the model:
+module.exports = KindAct;
+
+
+// This version below defines and exports the model in one step.
+// module.exports = mongoose.model('KindAct', kindActSchema);
