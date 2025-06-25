@@ -1,3 +1,5 @@
+// Building the Model with creating the schema, defining the model, and exporting the model
+
 const mongoose = require('mongoose');
 
 // Creating the schema:
