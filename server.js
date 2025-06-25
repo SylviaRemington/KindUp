@@ -40,6 +40,6 @@ app.get('/', async (req, res) => {
 
 // ----------Starts the app and tells it to listen for requests on PORT (3000)-------------
 
-app.listen(port, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Listening on port ${process.env.PORT}`);
 });
