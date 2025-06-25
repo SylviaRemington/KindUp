@@ -13,5 +13,5 @@ const KindAct = mongoose.model('KindAct', kindActSchema);
 module.exports = KindAct;
 
 
-// This version below defines and exports the model in one step.
+// This version below defines and exports the model in one step. Could use this too instead of lines 9-13.
 // module.exports = mongoose.model('KindAct', kindActSchema);
