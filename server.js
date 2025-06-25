@@ -3,8 +3,8 @@
 
 // -----------------------------IMPORTS----------------------------------------------------
 
-const dotenv = require('dotenv');
-dotenv.config(); //putting dotenv at top & this ensures that the environment variables are available everywhere across the application.
+const dotenv = require('dotenv'); //requiring package
+dotenv.config(); //putting dotenv at top & this ensures that the environment variables are available everywhere across the application & this loads the environment variables from .env file
 const express = require('express');
 // EJS - don't need to require ejs because express automatically is designed to find it. (I think this is correct, but need to double check.)
 const mongoose = require('mongoose');
