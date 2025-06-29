@@ -78,7 +78,6 @@ app.post('/kindacts', async (req, res) => {
   // Convert checkbox values to true/false
   req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
   req.body.isBrandNew = req.body.isBrandNew === 'on';
-
   try {
     await KindAct.create(req.body); // saves to MongoDB
     // res.redirect('/kindacts/new');  // redirects to form again (or change to a list page later)
@@ -88,6 +87,8 @@ app.post('/kindacts', async (req, res) => {
     res.send('Error saving new kind act', err);
   }
 });
+
+
 
 // ----------Starts the app and tells it to listen for requests on PORT (3000)-------------
 
