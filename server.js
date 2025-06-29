@@ -40,7 +40,8 @@ mongoose.connection.on('connected', () => {
 // -----------------------------MIDDLEWARE-------------------------------------------------
 
 
-
+app.use(express.urlencoded({ extended: false }));
+//if using html forms that send data using POST, must use the above code.
 
 
 
