@@ -66,8 +66,11 @@ app.get('/kindacts/new', async (req, res) => { //this is the url route
   res.render('kindacts/new.ejs'); //this is a file path relative to views/
 });
 
+// POST ROUTE - for form on new.ejs
 app.post('/kindacts', (req, res) => {
   console.log('This page is working.');//is logging in terminal
+  console.log(req.body);
+  res.redirect('/kindacts/new');
 });
 
 // ----------Starts the app and tells it to listen for requests on PORT (3000)-------------
