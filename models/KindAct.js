@@ -5,7 +5,9 @@ const mongoose = require('mongoose');
 // Creating the schema:
 const kindActSchema = new mongoose.Schema({
   title: String,
-  description: String
+  description: String,
+  isTestedRandomActOfKindness: Boolean,
+  isBrandNew: Boolean,
 });
 
 // Defining the model:
