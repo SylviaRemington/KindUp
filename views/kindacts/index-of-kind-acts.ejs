@@ -1,3 +1,5 @@
+<!-- INDEX PAGE TEMPLATE -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,11 @@
     <title>Index of Kind Acts</title>
 </head>
 <body>
-    
+    <h1>All Kind Acts</h1>
+    <ul>
+        <% kindacts.forEach(kindact => { %>
+            <li><%= kindact.name %></li>
+        <% }); %>
+    </ul>   
 </body>
 </html>
