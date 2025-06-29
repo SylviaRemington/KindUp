@@ -155,4 +155,29 @@ Have a page of a comments section where you SHARE AN ACT OF KINDNESS you've witn
 //   console.log(`Listening on port ${port}`);
 // });
 
+/*
+ADDTL CODE VERSION FOR POST ROUTE FOR new.ejs using if else version:
+app.post('/kindacts', async (req, res) => {
+  Convert checkboxes using full if/else
+  if (req.body.isTestedRandomActOfKindness === 'on') {
+    req.body.isTestedRandomActOfKindness = true;
+  } else {
+    req.body.isTestedRandomActOfKindness = false;
+  }
 
+  if (req.body.isBrandNew === 'on') {
+    req.body.isBrandNew = true;
+  } else {
+    req.body.isBrandNew = false;
+  }
+
+  try {
+    await KindAct.create(req.body); // Save to MongoDB
+    res.render('kindacts/new.ejs', { success: true }); // Show success message
+  } catch (err) {
+    console.log(err);
+    res.send('Error saving new kind act');
+  }
+});
+
+*/
