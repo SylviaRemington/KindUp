@@ -10,7 +10,7 @@
 
     <!-- Creating a function for the form once it's completed for better user interaction-->
     <% if (typeof success !== 'undefined' && success) { %>
-    <p style="color: green;">✅ Complete! Your kind act was created!</p>
+    <p id="success-message" style="color: green;">✅ Complete! Your kind act was created!</p>
     <% } %>
 
     <!-- creating a form for 'Create A New Kind Act' here -->
@@ -31,5 +31,16 @@
 
         <button type="submit">Add Kind Act</button>
     </form>
+
+
+    <script>
+    const message = document.getElementById('success-message');
+    if (message) {
+    setTimeout(() => {
+      message.style.display = 'none';
+    }, 5000); // 5000 milliseconds = 5 seconds
+  }
+</script>
+
 </body>
 </html>
