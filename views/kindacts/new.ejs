@@ -8,6 +8,11 @@
 <body>
     <h1>Create A New Kind Act</h1>
 
+    <!-- Creating a function for the form once it's completed for better user interaction-->
+    <% if (typeof success !== 'undefined' && success) { %>
+    <p style="color: green;">✅ Complete! Your kind act was created!</p>
+    <% } %>
+
     <!-- creating a form for 'Create A New Kind Act' here -->
     <form action="/kindacts" method="POST">
         <label for="title">Title:</label>

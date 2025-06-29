@@ -67,10 +67,26 @@ app.get('/kindacts/new', async (req, res) => { //this is the url route
 });
 
 // POST ROUTE - for form on new.ejs
-app.post('/kindacts', (req, res) => {
-  console.log('This page is working.');//is logging in terminal
-  console.log(req.body);
-  res.redirect('/kindacts/new');
+// Initial post route to make sure code is working:
+// app.post('/kindacts', (req, res) => {
+  // console.log('This page is working.');//is logging in terminal
+//   console.log(req.body);
+//   res.redirect('/kindacts/new');
+// });
+
+app.post('/kindacts', async (req, res) => {
+  // Convert checkbox values to true/false
+  req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
+  req.body.isBrandNew = req.body.isBrandNew === 'on';
+
+  try {
+    await KindAct.create(req.body); // saves to MongoDB
+    // res.redirect('/kindacts/new');  // redirects to form again (or change to a list page later)
+    res.render('kindacts/new.ejs', { success: true });
+  } catch (err) {
+    console.log(err);
+    res.send('Error saving new kind act', err);
+  }
 });
 
 // ----------Starts the app and tells it to listen for requests on PORT (3000)-------------
