@@ -12,9 +12,11 @@
     <h1>All Kind Acts</h1>
     <ul>
         <% kindacts.forEach(kindact => { %>
-            <li><%= kindact.title %></li>
+            <li><a href="/kindacts/<%= kindact._id %>"><%= kindact.title %></a></li>
         <% }); %>
-    </ul>   
+    </ul>  
+    
+    <br>
 
     <!-- LINKS TO APP PAGES -->
     <a href="/kindacts/new">Add New Kind Act</a> <br>
