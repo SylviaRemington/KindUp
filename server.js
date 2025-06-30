@@ -65,10 +65,15 @@ app.get('/', async (req, res) => {
 // INDEX ROUTE - for index-of-kind-acts.ejs
 app.get('/kindacts', async (req,res) => {
   const allKindActs = await KindAct.find(); //setting up finding KindActs in database
-  console.log(allKindActs); //checking to make sure we have all the data we are looking for and checking in terminal
-  // This above is currently retrieving all kindacts from the database correctly... Had to do sometroubleshooting but working now.
-  res.send('Welcome to the index page for all the kind acts!'); //making sure index page is working
+  res.render("kindacts/index-of-kind-acts.ejs", { kindacts: allKindActs });
 });
+/*
+EXPLANATION OF WHAT ABOVE CODE IS DOING FOR kindacts: allKindActs part - note for myself:
+-I'm creating a route to show all the kind acts.
+-When I write { kindacts: allKindActs }, I'm sending the data I got from the database into the EJS file.
+-That way, my EJS file can use the kind acts and show them on the page.
+-I'm not retrieving data with that part — I'm just passing it along so the EJS can display it.
+*/
 
 
 // NEW ROUTE - for new.ejs
