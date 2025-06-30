@@ -97,7 +97,7 @@ app.post('/kindacts', async (req, res) => {
   try {
     await KindAct.create(req.body); // saves to MongoDB
     // res.redirect('/kindacts/new');  // redirects to form again (or change to a list page later)
-    res.render('kindacts/new.ejs', { success: true });
+    // Can also do a res.redirect('/kindacts') in the future if want to redirect to index-of-kind-acts instead of complete message    res.render('kindacts/new.ejs', { success: true });
   } catch (err) {
     console.log(err);
     res.send('Error saving new kind act', err);
