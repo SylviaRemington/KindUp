@@ -6,8 +6,9 @@
  - Link to deployed version + planning materials
  - Attribution if any
  - Technologies used 
- - Next steps / stretch goals
+ - Next steps / stretch goals<br>
 
+<br>
 
 # KindUp
 
