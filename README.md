@@ -24,10 +24,10 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 
 
 ## Tech Stack
-
+- 
 
 ## Setup & Installation Requirements
-
+#### MVP Requirements for Application Project:
 
 ## Planning / Process / Ideas
 
@@ -40,20 +40,22 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 4. Pseudocode (maybe create a link to access & go to a different page)
 5. Actionable tasks translated to Kanban Board via Trello or...
 
-#### Design Process
+#### Design Process:
 Initial wireframes
 Mockups with initial designs
 Choosing a theme
 
-#### Code Process
+#### Code Process:
 
-#### Stretch Goals
+#### Stretch Goals:
 
-#### Known Bugs
+#### Known Bugs:
+
 
 ## Key Takeaways
-### Challenges & Wins
-### Future Improvements
+#### Challenges & Wins:
+#### Future Improvements:
+#### Other Random Thoughts About The Project:
 
 ## Resources/Credits
 
