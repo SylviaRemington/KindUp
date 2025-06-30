@@ -1,4 +1,5 @@
 ### MVP FOR README:
+(delete this MVP info once placed on README)
 README should have:
  - Screenshot or logo
  - Description of the app
