@@ -85,6 +85,11 @@ app.get('/kindacts/new', async (req, res) => { //this is the url route
   res.render('kindacts/new.ejs'); //this is a file path relative to views/
 });
 
+// SHOWPAGE ROUTE - to make links from index-of-kind-acts.ejs dynamic
+app.get('/kindacts/:kindactId', (req, res) => {
+  res.send('Showpage');
+});
+
 // POST ROUTE - for form on new.ejs
 // Initial post route to make sure code is working:
 // app.post('/kindacts', (req, res) => {
