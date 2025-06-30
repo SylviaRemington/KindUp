@@ -1,3 +1,13 @@
+### MVP FOR README:
+README should have:
+ - Screenshot or logo
+ - Description of the app
+ - Link to deployed version + planning materials
+ - Attribution if any
+ - Technologies used 
+ - Next steps / stretch goals
+
+
 # KindUp
 
 #### MEN Stack CRUD App - General Assembly Project 2
