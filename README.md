@@ -86,4 +86,6 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 #### Other Random Thoughts About The Project:
 
 ## Resources/Credits
-
+- 
+- 
+- 
