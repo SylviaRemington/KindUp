@@ -35,6 +35,10 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 });
 
+// ERROR TROUBLESHOOTING
+// mongoose.connection.on('error', err => {
+//   console.error('MongoDB connection error:', err);
+// });
 
 
 // -----------------------------MIDDLEWARE-------------------------------------------------
@@ -96,14 +100,12 @@ app.post('/kindacts', async (req, res) => {
   req.body.isBrandNew = req.body.isBrandNew === 'on';
   try {
     await KindAct.create(req.body); // saves to MongoDB
-    // res.redirect('/kindacts/new');  // redirects to form again (or change to a list page later)
-    // Can also do a res.redirect('/kindacts') in the future if want to redirect to index-of-kind-acts instead of complete message    res.render('kindacts/new.ejs', { success: true });
+    res.render('kindacts/new.ejs', {success: true}); 
   } catch (err) {
     console.log(err);
     res.send('Error saving new kind act', err);
   }
 });
-
 
 
 
