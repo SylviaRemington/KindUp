@@ -7,8 +7,7 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 
 #### Key Features:
 
-- ### KindAct Dashboard: 
-Logged-in users can create, read, update, and delete their own acts of kindness
+- #### KindAct Dashboard: Logged-in users can create, read, update, and delete their own acts of kindness
 
 - Public Kindness Feed: 
 Anyone can browse all submitted kind acts on the index page
