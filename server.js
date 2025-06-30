@@ -61,6 +61,11 @@ app.get('/', async (req, res) => {
     res.render('index.ejs'); 
 });
 
+// INDEX ROUTE - for index-of-kind-acts.ejs
+app.get('/kindacts', (req,res) => {
+  res.send('Welcome to the index page for all the kind acts!'); //making sure index page is working
+});
+
 // NEW ROUTE - for new.ejs
 app.get('/kindacts/new', async (req, res) => { //this is the url route
   res.render('kindacts/new.ejs'); //this is a file path relative to views/
@@ -74,6 +79,7 @@ app.get('/kindacts/new', async (req, res) => { //this is the url route
 //   res.redirect('/kindacts/new');
 // });
 
+// POST ROUTE - for new.ejs
 app.post('/kindacts', async (req, res) => {
   // Convert checkbox values to true/false
   req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
