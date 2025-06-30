@@ -1,8 +1,8 @@
 # KindUp
 
-MEN Stack CRUD App - General Assembly Project 2
+#### MEN Stack CRUD App - General Assembly Project 2
 
-by Sylvia Remington
+#### by Sylvia Remington
 
 ## Welcome to the KindUp Movement!
 KindUp is a full-stack web app that encourages users to spread positivity through random acts of kindness. Users can create, view, edit, and delete their own kind acts, as well as comment on and like others’ contributions. The app uses MongoDB, Express, Node.js, and EJS, with authentication and user-specific features to build a meaningful, interactive experience.
@@ -25,13 +25,25 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 
 ## Tech Stack
 - 
+- 
+- 
+- 
+- 
 
 ## Setup & Installation Requirements
 #### MVP Requirements for Application Project:
+- 
+- 
+- 
+- 
+- 
 
 ## Planning / Process / Ideas
 
 #### Early Concepts:
+- 
+- 
+- 
 
 #### Planning Process:
 1. Created ...(more info here)
@@ -39,17 +51,32 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 3. Mapped out Data Structure needed for card deck
 4. Pseudocode (maybe create a link to access & go to a different page)
 5. Actionable tasks translated to Kanban Board via Trello or...
+- 
+- 
+- 
 
 #### Design Process:
 Initial wireframes
 Mockups with initial designs
 Choosing a theme
+- 
+- 
+- 
 
 #### Code Process:
+- 
+- 
+- 
 
 #### Stretch Goals:
+- 
+- 
+- 
 
 #### Known Bugs:
+- 
+- 
+- 
 
 
 ## Key Takeaways
