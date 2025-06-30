@@ -8,7 +8,7 @@
 KindUp is a full-stack web app that encourages users to spread positivity through random acts of kindness. Users can create, view, edit, and delete their own kind acts, as well as comment on and like others’ contributions. The app uses MongoDB, Express, Node.js, and EJS, with authentication and user-specific features to build a meaningful, interactive experience.
 
 
-#### Key Features:
+**Key Features:**
 
 - **KindAct Dashboard:** Logged-in users can create, read, update, and delete their own acts of kindness.
 
