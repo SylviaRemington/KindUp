@@ -27,7 +27,7 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 - **Node.js** - the backend runtime environment for running JavaScript on the server
 - **Express.js** – the server framework that handles routes, server logic, and middleware
 - **EJS** – as my templating engine for rendering dynamic HTML templates for the frontend
-- **Mongoose** – to connect and interact with MongoDB using models and schemas (defining data schemas/models)
+- **Mongoose** – to connect & interact with MongoDB using models & schemas (defining data schemas/models)
 - **MongoDB** – my database for storing Kind Acts, User Accounts, Comments, and Likes
 - **CSS** – for basic styling, layout, & visual formatting (inside a public/ directory)
 - **Session-based authentication** – using express-session to track logged-in users / manages user login sessions for authentication
