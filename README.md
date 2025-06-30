@@ -35,11 +35,12 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 - 
 - 
 - 
+#### Addtl Setup & Installation Requirements:
+- 
 - 
 - 
 
 ## Planning / Process / Ideas
-
 #### Early Concepts:
 - 
 - 
@@ -56,9 +57,9 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 - 
 
 #### Design Process:
-Initial wireframes
-Mockups with initial designs
-Choosing a theme
+- Initial wireframes
+- Mockups with initial designs
+- Choosing a theme
 - 
 - 
 - 
