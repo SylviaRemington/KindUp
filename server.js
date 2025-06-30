@@ -61,10 +61,15 @@ app.get('/', async (req, res) => {
     res.render('index.ejs'); 
 });
 
+
 // INDEX ROUTE - for index-of-kind-acts.ejs
-app.get('/kindacts', (req,res) => {
+app.get('/kindacts', async (req,res) => {
+  const allKindActs = await KindAct.find(); //setting up finding KindActs in database
+  console.log(allKindActs); //checking to make sure we have all the data we are looking for and checking in terminal
+  // This above is currently retrieving all kindacts from the database correctly... Had to do sometroubleshooting but working now.
   res.send('Welcome to the index page for all the kind acts!'); //making sure index page is working
 });
+
 
 // NEW ROUTE - for new.ejs
 app.get('/kindacts/new', async (req, res) => { //this is the url route
