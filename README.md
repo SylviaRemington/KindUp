@@ -6,7 +6,7 @@
  - Link to deployed version + planning materials
  - Attribution if any
  - Technologies used 
- - Next steps / stretch goals<br>
+ - Next steps / stretch goals
 
 <br>
 
