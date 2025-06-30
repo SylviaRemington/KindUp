@@ -87,6 +87,7 @@ app.get('/kindacts/new', async (req, res) => { //this is the url route
 
 // SHOWPAGE ROUTE - to make links from index-of-kind-acts.ejs dynamic
 app.get('/kindacts/:kindactId', (req, res) => {
+  
   res.send('Showpage');
 });
 
