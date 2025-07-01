@@ -11,7 +11,21 @@
 
 </head>
 <body>
+    <!-- VERSION ONE -->
      <h1><%= kindact.title %></h1> 
+    <% if (kindact.isTestedRandomActOfKindness) { %>
+    <p>This Random Act of Kindness is tested and works to create change on the planet!</p>
+    <% } else { %>
+    <p>This Random Act of Kindness hasn't been tested yet; but let's do it!</p>
+    <% } %>
+
+     <!-- VERSION TWO -->
+    <h1><%= kindact.title %></h1> 
+    <% if (kindact.isTestedRandomActOfKindness) { %>
+    <p>This Kind Act has been tested and makes a positive impact! Give it a try!</p>
+    <% } else { %>
+    <p>This one’s untested... But you could be the first to spark change!</p>
+    <% } %>
 
 </body>
 </html>
