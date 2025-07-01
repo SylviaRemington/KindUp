@@ -87,7 +87,7 @@ app.get('/kindacts/new', async (req, res) => { //this is the url route
 
 // SHOWPAGE ROUTE - to make links from index-of-kind-acts.ejs dynamic
 app.get('/kindacts/:kindactId', async (req, res) => {
-  const foundKindAct = await KindAct.findById(req.params.kindactId);
+  const foundKindAct = await KindAct.findById(req.params.kindactId); //requesting the parameters of the url
   // console.log(foundKindAct);
   // res.send(`This route renders the showpage for title: ${req.params.kindactId}.`);
   // res.send(`This route renders the showpage for the Kind Act named: ${foundKindAct.title}.`);
