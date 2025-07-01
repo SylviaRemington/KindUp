@@ -119,6 +119,15 @@ app.post('/kindacts', async (req, res) => {
   }
 });
 
+// PUT ROUTE
+
+
+// DELETE ROUTE - on showpage
+app.delete('/kindacts/:kindactId', async (req, res) => {
+  // res.send("This is the delete route.");
+  await KindAct.findByIdAndDelete(req.params.kindactId);
+  res.redirect('/kindacts');
+});
 
 
 
