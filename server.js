@@ -48,7 +48,7 @@ app.use(express.urlencoded({ extended: false }));
 //If using html forms that send data using POST, must use the above code.
 //This middleware parses incoming request bodies, extracting form data and converting it 
 // into a JavaScript object. It then attaches this object to the req.body property of the 
-// request, making the form data easily accessible within our route handlers.
+// request, making the form data easily accessible within our route handlers. (this explanation is from chatgpt and me trying to understand middleware.)
 
 
 
