@@ -49,7 +49,7 @@ app.use(express.urlencoded({ extended: false }));
 //This middleware parses incoming request bodies, extracting form data and converting it 
 // into a JavaScript object. It then attaches this object to the req.body property of the 
 // request, making the form data easily accessible within our route handlers. (this explanation is from chatgpt and me trying to understand middleware.)
-
+// Note: got this explanation from ChatGPT. And slightly tweaking it to fit my understanding of how Middleware looks.
 
 
 // -----------------------------ROUTES-----------------------------------------------------
