@@ -120,6 +120,8 @@ app.post('/kindacts', async (req, res) => {
 });
 // for post route - could also do, if req.body.isTestedRandomActOfKindness === 'on' and then do,
 // req.body.isTestedRandomActOfKindness = true;} else {request.body.isTested... = false;}
+// then can await KindAct.create(req.body); and then redirect to diff page when done
+
 
 // PUT ROUTE
 
