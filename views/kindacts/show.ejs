@@ -13,15 +13,31 @@
 <body>
 
     <h1><%= kindact.title %></h1> 
+
+    <!-- Checkbox Functionality -->
     <% if (kindact.isTestedRandomActOfKindness) { %>
         <p>This Kind Act has been tested and makes a positive impact! Give it a try!</p>
     <% } else { %>
         <p>This one’s untested... But you could be the first to spark change!</p>
     <% } %>
 
+    <br><br>
+
+    <!-- Delete Functionality -->
+    <form action="/kindacts/<%= kindact._id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= kindact.title %></button>
+    </form>
+     <!-- Normally, forms only support GET or POST methods, 
+      but we want to send a DELETE request. To achieve this, we use a 
+      query parameter ?_method=DELETE in the action URL. This tricks our server 
+      into treating the POST request as a DELETE request, thanks to the 
+      method-override middleware we set up in server.js. -->
+
+    <br>
+
     <a href="/kindacts">⬅︎ Let's Check Out More Kind Acts! Woot Woot!</a> <br>
     <a href="/">⬅︎ Back to Homepage</a>
 
-    
+
 </body>
 </html>

@@ -8,6 +8,8 @@ dotenv.config(); //putting dotenv at top & this ensures that the environment var
 const express = require('express');
 // EJS - don't need to require ejs because express automatically is designed to find it. (I think this is correct, but need to double check.)
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
+const morgan = require('morgan');
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
 
@@ -50,7 +52,8 @@ app.use(express.urlencoded({ extended: false }));
 // into a JavaScript object. It then attaches this object to the req.body property of the 
 // request, making the form data easily accessible within our route handlers. (this explanation is from chatgpt and me trying to understand middleware.)
 // Note: got this explanation from ChatGPT. And slightly tweaking it to fit my understanding of how Middleware looks.
-
+app.use(methodOverride("_method")); //tells Express app to use a middleware function that lets you use PUT/DELETE in HTML forms since can't originally do this & look for the method of either ?_method=DELETE or ?_method=PUT
+app.use(morgan("dev")); 
 
 // -----------------------------ROUTES-----------------------------------------------------
 
