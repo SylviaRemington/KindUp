@@ -109,7 +109,7 @@ app.get('/kindacts/:kindactId', async (req, res) => {
 app.post('/kindacts', async (req, res) => {
   // Convert checkbox values to true/false
   req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
-  req.body.isBrandNew = req.body.isBrandNew === 'on';
+  req.body.isBrandNew = req.body.isBrandNew === 'on'; //request body is the data from the form
   try {
     await KindAct.create(req.body); // saves to MongoDB
     res.render('kindacts/new.ejs', {success: true}); 
