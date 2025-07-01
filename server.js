@@ -118,6 +118,8 @@ app.post('/kindacts', async (req, res) => {
     res.send('Error saving new kind act', err);
   }
 });
+// for post route - could also do, if req.body.isTestedRandomActOfKindness === 'on' and then do,
+// req.body.isTestedRandomActOfKindness = true;} else {request.body.isTested... = false;}
 
 // PUT ROUTE
 
