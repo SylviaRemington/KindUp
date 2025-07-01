@@ -9,7 +9,7 @@ const express = require('express');
 // EJS - don't need to require ejs because express automatically is designed to find it. (I think this is correct, but need to double check.)
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
-const morgan = require('morgan');
+const morgan = require('morgan'); //serves as a logging tool that tells us what is coming in
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
 
@@ -46,13 +46,13 @@ mongoose.connection.on('connected', () => {
 // -----------------------------MIDDLEWARE-------------------------------------------------
 
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); //allows us to get request bodies
 //If using html forms that send data using POST, must use the above code.
 //This middleware parses incoming request bodies, extracting form data and converting it 
 // into a JavaScript object. It then attaches this object to the req.body property of the 
 // request, making the form data easily accessible within our route handlers. (this explanation is from chatgpt and me trying to understand middleware.)
 // Note: got this explanation from ChatGPT. And slightly tweaking it to fit my understanding of how Middleware looks.
-app.use(methodOverride("_method")); //tells Express app to use a middleware function that lets you use PUT/DELETE in HTML forms since can't originally do this & look for the method of either ?_method=DELETE or ?_method=PUT
+app.use(methodOverride("_method")); //Says "find this _method in the url endpoint & tells Express app to use a middleware function that lets you use PUT/DELETE in HTML forms since can't originally do this & look for the method of either ?_method=DELETE or ?_method=PUT
 app.use(morgan("dev")); 
 
 // -----------------------------ROUTES-----------------------------------------------------
