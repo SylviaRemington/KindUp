@@ -27,9 +27,11 @@
 
     <!-- Edit Functionality -->
     <!-- Initially wrote a PUT method, but need a get method first to get to the page for editing. -->
-     <form action="/kindsacts/<%= kindact._id %>/edit" method="GET">
+     <form action="/kindacts/<%= kindact._id %>/edit" method="GET">
         <button type="submit">Edit <%= kindact.title %></button>
      </form> 
+
+     <a href="/kindacts/<%= kindact._id %>/edit">Edit<%= kindact.title %></a>
 
      <br>
 
