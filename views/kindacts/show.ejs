@@ -15,7 +15,7 @@
     <h1><%= kindact.title %></h1> 
 
     <!-- Creating message/function so that once updated, page will show message for better UI -->
-    <% if (req.query.edited === 'true') { %>
+    <% if (typeof success !== 'undefined' && success) { %>
         <p class="success-message">✅ Kind Act successfully updated!</p>
     <% } %>
 

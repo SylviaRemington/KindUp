@@ -122,7 +122,10 @@ app.get('/kindacts/:kindactId', async (req, res) => {
   // console.log(foundKindAct);
   // res.send(`This route renders the showpage for title: ${req.params.kindactId}.`);
   // res.send(`This route renders the showpage for the Kind Act named: ${foundKindAct.title}.`);
-  res.render('kindacts/show.ejs', { kindact: foundKindAct});
+  res.render('kindacts/show.ejs', { 
+    kindact: foundKindAct, //getting all the data from the database to put into ejs file
+    success: req.query.success === 'true' //if url includes success message, then show success message from top of show.ejs page
+  });
 });
 
 // DELETE ROUTE - on showpage
@@ -150,7 +153,7 @@ app.put('/kindacts/:kindactId', async (req, res) => {
   await KindAct.findByIdAndUpdate(req.params.kindactId, req.body);
 
   // adding query parameters so can redirect to message pop up that it was updated
-  res.redirect(`/kindacts/${req.params.kindactId}?edited=true`);
+  res.redirect(`/kindacts/${req.params.kindactId}?success=true`);
 
 });
 
