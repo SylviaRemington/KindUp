@@ -135,12 +135,22 @@ app.delete('/kindacts/:kindactId', async (req, res) => {
 
 // PUT ROUTE - ON /KINDACTS/:KINDACTID 
 app.put('/kindacts/:kindactId', async (req, res) => {
-  if (req.body.isTestedRandomActOfKindness === 'on')
+  if (req.body.isTestedRandomActOfKindness === 'on') {
     req.body.isTestedRandomActOfKindness = true;
   } else {
     req.body.isTestedRandomActOfKindness = false;
   }
 
+  if (req.body.isBrandNew === 'on') {
+    req.body.isBrandNew = true;
+  } else {
+    req.body.isBrandNew = false;
+  }
+
+  await KindAct.findByIdAndUpdate(req.params.kindactId, req.body);
+
+  // adding query parameters so can redirect to message pop up that it was updated
+  res.redirect(`/kindacts/${req.params.kindactId}?edited=true`);
 
 });
 

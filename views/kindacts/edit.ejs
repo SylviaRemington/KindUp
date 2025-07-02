@@ -10,7 +10,7 @@
 
     <h1>Edit <%= kindact.title %></h1> 
 
-    <form action="/kindacts/<%= kindact.title %>?_method=PUT" method="POST">
+    <form action="/kindacts/<%= kindact._id %>?_method=PUT" method="POST">
         <label for="title">Title:</label>
         <input type="text" name="title" id="title" value="<%= kindact.title %>"><br><br>
 
