@@ -10,5 +10,10 @@ router.get("/sign-up", (req, res) => {
 });
 // localhost:3000/auth/sign-up
 
+// router.get("/sign-off", (req, res) => {
+//     res.send('sign off route');
+// });
+
+
 
 module.exports = router; //exporting router from here
