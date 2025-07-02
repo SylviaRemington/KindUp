@@ -23,15 +23,17 @@
 
     <br><br>
 
+    <!-- ! Need CSS for (below) Edit & Delete Functionality Buttons to be side by side -->
+
     <!-- Edit Functionality -->
      <form action="/kindsacts/<%= kindact._id %>?_method=PUT" method="POST">
         <button type="submit">Edit <%= kindact.title %></button>
-     </form>
+     </form> 
 
-     <br><br>
+     <br>
 
     <!-- Delete Functionality -->
-    <form action="/kindacts/<%= kindact._id %>?_method=DELETE" method="POST">
+    <form id="delete-form" action="/kindacts/<%= kindact._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete <%= kindact.title %></button>
     </form>
      <!-- Normally, forms only support GET or POST methods, 
@@ -44,6 +46,21 @@
 
     <a href="/kindacts">⬅︎ Let's Check Out More Kind Acts! Woot Woot!</a> <br>
     <a href="/">⬅︎ Back to Homepage</a>
+
+
+    <!-- Warning Message Before Deletion -->
+    <!-- Can't customize the browser's confirm() popup because it uses system's built in 'Ok' and 'Cancel'. If want to change it need to use my own custom modal popoup and not confirm() -->
+    <!-- To customize popup need to add js at bottom of page, update my form above, and also add addtl html to show pages body. -->
+    <!-- ! If I have time, I'd like to customize "Ok" and "Cancel" to "Confirm Deletion" and "Keep Kind Act" for further UI clarity. -->
+    <script>
+    const deleteFormPopup = document.getElementById("delete-form");
+    deleteFormPopup.addEventListener("submit", function(event) {
+        const confirmed = confirm("!!!! --- Warning: Are you sure you want to delete this Kind Act? Once this action is taken, it can't be undone --- !!!!!");
+        if (!confirmed) {
+            event.preventDefault();
+        }
+        });
+    </script>
 
 
 </body>
