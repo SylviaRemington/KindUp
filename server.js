@@ -10,6 +10,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const morgan = require('morgan'); //serves as a logging tool that tells us what is coming in
+
+//auth router holds all the authorization endpoints
+const authRouter = require("./controllers/auth.js");
+
+
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
 
