@@ -137,8 +137,12 @@ app.delete('/kindacts/:kindactId', async (req, res) => {
 // ----------------------------------------------------------------------------------------
 
 // EDIT ROUTE - /kindacts/:kindactId/edit
-app.get('/kindacts/:kindactId/edit', (req, res) => {
-  res.send(`This is the edit page for ${req.params.kindactId}`);
+app.get('/kindacts/:kindactId/edit', async (req, res) => {
+  // res.send(`This is the edit page for ${req.params.kindactId}`);
+  //update defining route so more dynamic and works with edit page and communicates with database
+  const foundKindActForEditPage = await KindAct.findById(req.params.kindactId);
+  console.log(foundKindActForEditPage);
+  res.send(`This is the edit route for ${foundKindActForEditPage.title}`);
 });
 
 
