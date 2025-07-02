@@ -23,6 +23,13 @@
 
     <br><br>
 
+    <!-- Edit Functionality -->
+     <form action="/kindsacts/<%= kindact._id %>?_method=PUT" method="POST">
+        <button type="submit">Edit <%= kindact.title %></button>
+     </form>
+
+     <br><br>
+
     <!-- Delete Functionality -->
     <form action="/kindacts/<%= kindact._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete <%= kindact.title %></button>

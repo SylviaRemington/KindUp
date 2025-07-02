@@ -97,6 +97,10 @@ app.get('/kindacts/:kindactId', async (req, res) => {
   res.render('kindacts/show.ejs', { kindact: foundKindAct});
 });
 
+app.get('/kindacts/:kindactId/edit', (req, res) => {
+  res.send(`This is the edit page for ${req.params.kindactId}`);
+});
+
 // POST ROUTE - for form on new.ejs
 // Initial post route to make sure code is working:
 // app.post('/kindacts', (req, res) => {
