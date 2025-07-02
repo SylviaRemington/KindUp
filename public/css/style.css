@@ -10,3 +10,11 @@
 SEE LEVEL UP CONTENT FROM MEN STACK CRUD APP FRUITS CALLED "STYLE THE APPLICATION"
 FOR FURTHER INFO ON STYLING THIS CONTENT.
 */
+
+
+/* Not currently working - need to figure out why */
+button {
+    display: flex;
+    flex-direction: row;
+}
+
