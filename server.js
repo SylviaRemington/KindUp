@@ -62,14 +62,14 @@ app.use(morgan("dev"));
 //   res.send('Hello, all you supahstaaars out there!')
 // });
 
-// HOMEPAGE ROUTE
+// HOMEPAGE ROUTE - / --------------------------------------------------------------------
 app.get('/', async (req, res) => {
     // res.send('Hello, friend! This will be our homepage once it has been set up!');
     res.render('index.ejs'); 
 });
 
 
-// INDEX ROUTE - for index-of-kind-acts.ejs
+// INDEX ROUTE - for index-of-kind-acts.ejs - /KINDACTS ---------------------------------
 app.get('/kindacts', async (req,res) => {
   const allKindActs = await KindAct.find(); //setting up finding KindActs in database
   res.render("kindacts/index-of-kind-acts.ejs", { kindacts: allKindActs });
@@ -82,26 +82,7 @@ EXPLANATION OF WHAT ABOVE CODE IS DOING FOR kindacts: allKindActs part - note fo
 -I'm not retrieving data with that part — I'm just passing it along so the EJS can display it.
 */
 
-
-// NEW ROUTE - for new.ejs
-app.get('/kindacts/new', async (req, res) => { //this is the url route
-  res.render('kindacts/new.ejs'); //this is a file path relative to views/
-});
-
-// SHOWPAGE ROUTE - to make links from index-of-kind-acts.ejs dynamic
-app.get('/kindacts/:kindactId', async (req, res) => {
-  const foundKindAct = await KindAct.findById(req.params.kindactId); //requesting the parameters of the url
-  // console.log(foundKindAct);
-  // res.send(`This route renders the showpage for title: ${req.params.kindactId}.`);
-  // res.send(`This route renders the showpage for the Kind Act named: ${foundKindAct.title}.`);
-  res.render('kindacts/show.ejs', { kindact: foundKindAct});
-});
-
-app.get('/kindacts/:kindactId/edit', (req, res) => {
-  res.send(`This is the edit page for ${req.params.kindactId}`);
-});
-
-// POST ROUTE - for form on new.ejs
+// POST ROUTE - for form on new.ejs - /KINDACTS
 // Initial post route to make sure code is working:
 // app.post('/kindacts', (req, res) => {
   // console.log('This page is working.');//is logging in terminal
@@ -109,7 +90,7 @@ app.get('/kindacts/:kindactId/edit', (req, res) => {
 //   res.redirect('/kindacts/new');
 // });
 
-// POST ROUTE - for new.ejs
+// POST ROUTE - for new.ejs - /KINDACTS
 app.post('/kindacts', async (req, res) => {
   // Convert checkbox values to true/false
   req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
@@ -126,9 +107,23 @@ app.post('/kindacts', async (req, res) => {
 // req.body.isTestedRandomActOfKindness = true;} else {request.body.isTested... = false;}
 // then can await KindAct.create(req.body); and then redirect to diff page when done
 
+// ----------------------------------------------------------------------------------------
 
-// PUT ROUTE
+// NEW ROUTE - for new.ejs - /KINDACTS/NEW
+app.get('/kindacts/new', async (req, res) => { //this is the url route
+  res.render('kindacts/new.ejs'); //this is a file path relative to views/
+});
 
+// ----------------------------------------------------------------------------------------
+
+// SHOWPAGE ROUTE - /KINDACTS/:KINDACTID - to make links from index-of-kind-acts.ejs dynamic
+app.get('/kindacts/:kindactId', async (req, res) => {
+  const foundKindAct = await KindAct.findById(req.params.kindactId); //requesting the parameters of the url
+  // console.log(foundKindAct);
+  // res.send(`This route renders the showpage for title: ${req.params.kindactId}.`);
+  // res.send(`This route renders the showpage for the Kind Act named: ${foundKindAct.title}.`);
+  res.render('kindacts/show.ejs', { kindact: foundKindAct});
+});
 
 // DELETE ROUTE - on showpage
 app.delete('/kindacts/:kindactId', async (req, res) => {
@@ -137,6 +132,18 @@ app.delete('/kindacts/:kindactId', async (req, res) => {
   await KindAct.findByIdAndDelete(kindactId);
   res.redirect('/kindacts');
 });
+
+
+// ----------------------------------------------------------------------------------------
+
+// EDIT ROUTE - /kindacts/:kindactId/edit
+app.get('/kindacts/:kindactId/edit', (req, res) => {
+  res.send(`This is the edit page for ${req.params.kindactId}`);
+});
+
+// ----------------------------------------------------------------------------------------
+
+
 
 
 
