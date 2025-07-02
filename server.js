@@ -12,7 +12,7 @@ const methodOverride = require('method-override');
 const morgan = require('morgan'); //serves as a logging tool that tells us what is coming in
 
 //auth router holds all the authorization endpoints / importing the authRouter
-const authRouter = require("./controllers/auth.js");
+const authController = require("./controllers/auth.js");
 
 
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
