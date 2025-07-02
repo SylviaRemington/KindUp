@@ -8,7 +8,7 @@
 <body>
     <!-- Editing -->
 
-    <h1>Edit<%= kindact.title %></h1> 
+    <h1>Edit <%= kindact.title %></h1> 
 
     <form action="/kindacts/<%= kindact.title %>?_method=PUT" method="POST">
         <label for="title">Title:</label>
@@ -20,7 +20,6 @@
         <!-- Is a tested Random Act Of Kindness? -->
          <label for="isTestedRandomActOfKindness">Is a tested Random Act Of Kindness?</label>
          <input type="checkbox" name="isTestedRandomActOfKindness" id="Is a tested Random Act Of Kindness?" <% if(kindact.isTestedRandomActOfKindness) { %>checked<% } %> ><br><br>
-         <!-- ! Need to add checked ejs js functionality to line 22 and line 27 / start back here when back at this project -->
 
          <!-- Is a brand new, first time Random Act Of Kindness? -->
         <label for="isBrandNew">Is brand new?</label>
@@ -31,10 +30,10 @@
 
     <br><br>
 
+
     <!-- LINKS TO APP PAGES -->
     <a href="/kindacts">⬅︎ Back to Kind Acts!</a> <br>
     <a href="/">⬅︎ Back to Homepage</a>
-
 
 
     <!-- Script tags go after everything else because JS needs html elements to exist already before connecting to them. -->

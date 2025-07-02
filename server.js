@@ -133,6 +133,18 @@ app.delete('/kindacts/:kindactId', async (req, res) => {
   res.redirect('/kindacts');
 });
 
+// PUT ROUTE - ON /KINDACTS/:KINDACTID 
+app.put('/kindacts/:kindactId', async (req, res) => {
+  if (req.body.isTestedRandomActOfKindness === 'on')
+    req.body.isTestedRandomActOfKindness = true;
+  } else {
+    req.body.isTestedRandomActOfKindness = false;
+  }
+
+
+});
+
+
 
 // ----------------------------------------------------------------------------------------
 
@@ -150,10 +162,6 @@ app.get('/kindacts/:kindactId/edit', async (req, res) => {
 
 
 // ----------------------------------------------------------------------------------------
-
-
-
-
 
 // ----------Starts the app and tells it to listen for requests on PORT (3000)-------------
 
