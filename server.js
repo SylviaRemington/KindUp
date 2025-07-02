@@ -141,7 +141,7 @@ app.get('/kindacts/:kindactId/edit', async (req, res) => {
   // res.send(`This is the edit page for ${req.params.kindactId}`);
   //update defining route so more dynamic and works with edit page and communicates with database
   const foundKindActForEditPage = await KindAct.findById(req.params.kindactId);
-  res.render('fruits/edit.ejs', { kindact: foundKindActForEditPage });
+  res.render('kindacts/edit.ejs', { kindact: foundKindActForEditPage });
 });
 
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <!-- Editing -->
+
+    <h1>Edit<%= kindact.title %></h1> 
+
+    <form action="/kindacts" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title"><br><br>
+
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" ><br><br>
+
+        <!-- Is a tested Random Act Of Kindness? -->
+         <label for="isTestedRandomActOfKindness">Is a tested Random Act Of Kindness?</label>
+         <input type="checkbox" name="isTestedRandomActOfKindness" id="Is a tested Random Act Of Kindness?"><br><br>
+
+         <!-- Is a brand new, first time Random Act Of Kindness? -->
+        <label for="isBrandNew">Is brand new?</label>
+        <input type="checkbox" name="isBrandNew" id="isBrandNew"><br><br>
+
+        <button type="submit">Update Kind Act</button>
+    </form>
+
+    <br><br>
+
+    <!-- LINKS TO APP PAGES -->
+    <a href="/kindacts">⬅︎ Back to Kind Acts!</a> <br>
+    <a href="/">⬅︎ Back to Homepage</a>
+
+
+
+    <!-- Script tags go after everything else because JS needs html elements to exist already before connecting to them. -->
+    <!-- This script tag is to create a 3 second timeout after the success-message is put on the page so that it fades out. -->
+    <script>
+    const message = document.getElementById('success-message');
+    if (message) {
+    setTimeout(() => {
+      message.style.display = 'none';
+    }, 3000); // 3000 milliseconds = 3 seconds
+    }
+    </script>
+</body>
+</html>
