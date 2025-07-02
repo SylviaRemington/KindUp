@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const morgan = require('morgan'); //serves as a logging tool that tells us what is coming in
 
-//auth router holds all the authorization endpoints
+//auth router holds all the authorization endpoints / importing the authRouter
 const authRouter = require("./controllers/auth.js");
 
 
@@ -57,8 +57,12 @@ app.use(express.urlencoded({ extended: false })); //allows us to get request bod
 // into a JavaScript object. It then attaches this object to the req.body property of the 
 // request, making the form data easily accessible within our route handlers. (this explanation is from chatgpt and me trying to understand middleware.)
 // Note: got this explanation from ChatGPT. And slightly tweaking it to fit my understanding of how Middleware looks.
-app.use(methodOverride("_method")); //Says "find this _method in the url endpoint & tells Express app to use a middleware function that lets you use PUT/DELETE in HTML forms since can't originally do this & look for the method of either ?_method=DELETE or ?_method=PUT
-app.use(morgan("dev")); 
+
+app.use(methodOverride("_method")); // method override so I can do PUT and DELETE requests
+
+app.use(morgan("dev")); // morgan for logging / logging http requests
+
+app.use("/auth", authController); //invoke auth here / importing auth here
 
 // -----------------------------ROUTES-----------------------------------------------------
 
