@@ -8,6 +8,7 @@ router.get("/sign-up", (req, res) => {
     res.send('sign up route');
     // res.render("auth/sign-up.ejs");
 });
+// localhost:3000/auth/sign-up
 
 
 module.exports = router; //exporting router from here
