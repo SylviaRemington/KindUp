@@ -74,7 +74,9 @@ router.post("/sign-in", async (req, res) => {
     const userInDatabase = await User.findOne({username: req.body.username});
 
     // if no user in database
-    if 
+    if (!userInDatabase) {
+        return res.send('Login failed. Please try again.');
+    }
 
 
 });
