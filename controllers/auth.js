@@ -1,3 +1,5 @@
+// This is for authentication - so all authentication in authController area
+
 const express = require('express');
 const router = express.Router(); 
 //Router creates an object where we can define all of our end points & get methods.
@@ -7,6 +9,7 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 const User = require("../models/User.js"); //import our models
 
+// SIGN-UP ROUTE
 router.get("/sign-up", (req, res) => {
     res.render("auth/sign-up.ejs");
 });
@@ -56,6 +59,12 @@ router.post("/sign-up", async (req, res) => {
     res.send(`Thanks for signing up ${user.username}!`);
 
 });
+
+// SIGN-IN ROUTE
+router.get("/sign-in", (req, res) => {
+  res.render("auth/sign-in.ejs");
+});
+// localhost:3000/auth/sign-in
 
 
 
