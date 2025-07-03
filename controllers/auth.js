@@ -42,6 +42,18 @@ router.post("/sign-up", async (req, res) => {
         res.send("Passwords do not match.");
     }
 
+    // bcrypt - adding level of encryption with salting of 10
+    const hashedPassword = bcrypt.hashSync(req.body.password, 10);
+    req.body.password = hashedPassword;
+
+    // return res.send(hashedPassword);
+
+    // Validation logic
+    // Create a user if they:
+    // Have a unique username &
+    // Supplied matching password & password confirmation
+    const user = await User.create(req.body);
+    res.send(`Thanks for signing up ${user.username}!`);
 
 });
 
