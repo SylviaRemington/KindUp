@@ -5,7 +5,6 @@ const router = express.Router();
 //Router is a piece of middleware.
 
 const bcrypt = require('bcrypt');
-
 const User = require("../models/User.js"); //import our models
 
 router.get("/sign-up", (req, res) => {
