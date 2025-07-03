@@ -22,8 +22,26 @@ router.get("/sign-up", (req, res) => {
 // });
 
 // Second Version
+// router.post("/sign-up", async (req, res) => {
+//   res.send("Form submission accepted!");
+// });
+
+//Third Version
 router.post("/sign-up", async (req, res) => {
-  res.send("Form submission accepted!");
+    //Enforcing unique usernames
+    const userInDatabase = await User.findOne({username: req.body.username});
+
+    // looking for if user is unique
+    if (userInDatabase) {
+        return res.send("Username already taken.");
+    }
+
+    // looking for if passwords do not match
+    if (req.body.password !== req.body.confirmPassword) {
+        res.send("Passwords do not match.");
+    }
+
+    
 });
 
 
