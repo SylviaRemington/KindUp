@@ -14,8 +14,14 @@ router.get("/sign-up", (req, res) => {
 //     res.send('sign off route');
 // });
 
-router.post("/sign-up", (req, res) => {
-    res.send("submitted the form to create a new user");
+// First Version
+// router.post("/sign-up", (req, res) => {
+//     res.send("submitted the form to create a new user");
+// });
+
+// Second Version
+router.post("/sign-up", async (req, res) => {
+  res.send("Form submission accepted!");
 });
 
 
