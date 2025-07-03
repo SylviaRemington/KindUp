@@ -9,6 +9,7 @@ router.get("/sign-up", (req, res) => {
 });
 // localhost:3000/auth/sign-up
 
+// SIGN OFF ROUTE
 // router.get("/sign-off", (req, res) => {
 //     res.send('sign off route');
 // });
