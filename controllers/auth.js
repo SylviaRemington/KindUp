@@ -66,8 +66,17 @@ router.get("/sign-in", (req, res) => {
 });
 // localhost:3000/auth/sign-in
 
-router.post("/sign-in", (req, res) => {
-  res.send("User is trying to sign in.");
+router.post("/sign-in", async (req, res) => {
+    // res.send("User is trying to sign in."); // tested to make sure it functions
+    
+    // Now need to create the logic to make sure user exists
+    // We have to get the user before we check that password.
+    const userInDatabase = await User.findOne({username: req.body.username});
+
+    // if no user in database
+    if 
+
+
 });
 
 module.exports = router; //exporting router from here
