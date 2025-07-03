@@ -4,6 +4,8 @@ const router = express.Router();
 //Will be moving a lot of the app.gets into the Router and out of the server.js
 //Router is a piece of middleware.
 
+const bcrypt = require('bcrypt');
+
 const User = require("../models/User.js"); //import our models
 
 router.get("/sign-up", (req, res) => {
@@ -41,7 +43,7 @@ router.post("/sign-up", async (req, res) => {
         res.send("Passwords do not match.");
     }
 
-    
+
 });
 
 
