@@ -62,7 +62,7 @@ app.use(methodOverride("_method")); // method override so I can do PUT and DELET
 
 app.use(morgan("dev")); // morgan for logging / logging http requests
 
-app.use("/auth", authController); //invoke auth here / importing auth here
+app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
 
 // -----------------------------ROUTES-----------------------------------------------------
 
