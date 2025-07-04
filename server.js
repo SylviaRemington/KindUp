@@ -89,7 +89,11 @@ app.use("/auth", authController); //invoke auth here / importing auth here / Thi
 // HOMEPAGE ROUTE - / --------------------------------------------------------------------
 app.get('/', async (req, res) => {
     // res.send('Hello, friend! This will be our homepage once it has been set up!');
-    res.render('index.ejs'); 
+    res.render('index.ejs', {
+
+      //modifying the landing page & index route by adding a user object
+      user: req.session.user,
+    }); 
 });
 
 
