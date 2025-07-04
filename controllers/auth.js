@@ -93,6 +93,7 @@ router.post("/sign-in", async (req, res) => {
     // When there is a user AND they had the correct password: Time to make a session!
     // Avoid storing the password, even in hashed format, in the session.
     // If there is other data you want to save to `req.session.user`, do so here!
+    // Session-based authentication and managing whether a user is logged in or not - cookie with expiration time
     // Adding this request to the session & this allows session to stay signed in
     req.session.user = {
         username: userInDatabase.username,
@@ -105,8 +106,16 @@ router.post("/sign-in", async (req, res) => {
 
 });
 
-// ! CREATING A SIGN OUT LINK --START HERE WHEN COME BACK
+// CREATING A SIGN-OUT ROUTE - defining the sign-out route
+// MAKING SURE ROUTE WORKS FIRST - below
+// router.get('/sign-out', (req, res) => {
+//     res.send('Sign-Out Page');
+// });
+router.get('/sign-out', (req, res) => {
+    req.session.destroy();
+    res.redirect("/");
+});
+
 
 module.exports = router; //exporting router from here
 
-//  Session-based authentication and managing whether a user is logged in or not - cookie with expiration time
