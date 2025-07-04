@@ -105,9 +105,9 @@ app.get('/', async (req, res) => {
 
 app.get("/vip-lounge", (req, res) => {
   if (req.session.user) {
-    res.send(`Welcome to the Kind Movement party & VIP lounge, ${req.session.user.username}!`);
+    res.send(`Welcome to the Kind Movement Partaaay and VIP Lounge, ${req.session.user.username}!`);
   } else {
-    res.send("Sorry, no sign-in allowed, no soup for you.");
+    res.send("Sorry, no sign-in allowed. You aren't an existing user yet. But we'd love to have you!");
   }
 });
 
@@ -310,5 +310,22 @@ app.post('/kindacts', async (req, res) => {
     res.send('Error saving new kind act');
   }
 });
+
+*/
+
+/*
+ADDTL INFORMATION ABOUT DIFFERENCE BETWEEN AUTHENTICATION & AUTHORIZATION:
+
+Many functions of protected routes are related to authorization & authentication, 
+which sound very similar, but have a key difference:
+
+Authentication confirms that you are who you say you are. The app recognizes you.
+
+Authorization confirms that you are allowed to do something specific. 
+The app lets you do something because of who you are.
+
+Simply put, being a signed-in user doesn’t give you total power over everything 
+in an application, and we rely on the logic of protected routes to allow users 
+to manage their specific resources, without letting them alter anyone else’s.
 
 */
