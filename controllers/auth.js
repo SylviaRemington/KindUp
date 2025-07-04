@@ -100,7 +100,7 @@ router.post("/sign-in", async (req, res) => {
 
     // res.send('Welcome to the Kind Up Movement! We are so happy you are here, creating change on the planet!');
     
-    res.redirect('/');
+    res.redirect('/'); //redirecting to landing page home
 
 });
 
