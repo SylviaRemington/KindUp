@@ -10,6 +10,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const morgan = require('morgan'); //serves as a logging tool that tells us what is coming in
+const session = require('express-session');
 
 //auth router holds all the authorization endpoints / importing the authRouter
 const authController = require("./controllers/auth.js");
@@ -63,6 +64,10 @@ app.use(methodOverride("_method")); // method override so I can do PUT and DELET
 app.use(morgan("dev")); // morgan for logging / logging http requests
 
 app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
+
+//Express Session Module in the middleware
+
+
 
 // -----------------------------ROUTES-----------------------------------------------------
 
