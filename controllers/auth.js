@@ -93,3 +93,5 @@ router.post("/sign-in", async (req, res) => {
 });
 
 module.exports = router; //exporting router from here
+
+//  Session-based authentication and managing whether a user is logged in or not - cookie with expiration time
