@@ -65,8 +65,10 @@ app.use(morgan("dev")); // morgan for logging / logging http requests
 
 //Express-Session Module in the middleware
 //Need to check authentication before we go into any controller functions - so putting above controllers - e.g. /auth & authController below
+// THIS PART LOOKS FOR THE SESSIONS (the express-sessions) & asks "Should we send an is-logged-in or is-logged-out status "
 app.use(
   session({
+    // The SESSION_SECRET is what is being used to encrypt the data.
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
@@ -93,6 +95,10 @@ app.get('/', async (req, res) => {
     res.render('index.ejs', {
 
       //modifying the landing page & index route by adding a user object
+      // This express-session package is working with all the requests and seeing if there is a cookie on the request.
+      // Then says, "Ok, user is logged in and now will send info to the index.ejs and render that page."
+      // And this is now stored in the browser. //If the session is still there, then the user stays logged in.
+      // MAKING SURE YOU'RE SIGNED IN.
       user: req.session.user,
     }); 
 });

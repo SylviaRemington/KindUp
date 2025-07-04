@@ -95,6 +95,7 @@ router.post("/sign-in", async (req, res) => {
     // If there is other data you want to save to `req.session.user`, do so here!
     // Session-based authentication and managing whether a user is logged in or not - cookie with expiration time
     // Adding this request to the session & this allows session to stay signed in
+    // EXPRESS SESSION PACKAGE REALLY PAYS ATTENTION TO THIS PART BELOW:
     req.session.user = {
         username: userInDatabase.username,
         _id: userInDatabase._id,
