@@ -82,14 +82,13 @@ app.use("/auth", authController); //invoke auth here / importing auth here / Thi
 
 
 
-
-
 // -----------------------------ROUTES-----------------------------------------------------
 
 // TEST ROUTE TO CONFIRM SERVER IS WORKING PROPERLY
 // app.get('/', (req, res) => {
 //   res.send('Hello, all you supahstaaars out there!')
 // });
+
 
 // HOMEPAGE ROUTE - / --------------------------------------------------------------------
 app.get('/', async (req, res) => {
@@ -112,7 +111,6 @@ app.get("/vip-lounge", (req, res) => {
     res.send("Sorry, no sign-in allowed. You aren't an existing user yet. But we'd love to have you!");
   }
 });
-
 
 
 // INDEX ROUTE - for index-of-kind-acts.ejs - /KINDACTS ---------------------------------
@@ -153,12 +151,14 @@ app.post('/kindacts', async (req, res) => {
 // req.body.isTestedRandomActOfKindness = true;} else {request.body.isTested... = false;}
 // then can await KindAct.create(req.body); and then redirect to diff page when done
 
+
 // ----------------------------------------------------------------------------------------
 
 // NEW ROUTE - for new.ejs - /KINDACTS/NEW
 app.get('/kindacts/new', async (req, res) => { //this is the url route
   res.render('kindacts/new.ejs'); //this is a file path relative to views/
 });
+
 
 // ----------------------------------------------------------------------------------------
 
@@ -204,7 +204,6 @@ app.put('/kindacts/:kindactId', async (req, res) => {
 });
 
 
-
 // ----------------------------------------------------------------------------------------
 
 // EDIT ROUTE - /kindacts/:kindactId/edit
@@ -214,10 +213,6 @@ app.get('/kindacts/:kindactId/edit', async (req, res) => {
   const foundKindActForEditPage = await KindAct.findById(req.params.kindactId);
   res.render('kindacts/edit.ejs', { kindact: foundKindActForEditPage });
 });
-
-
-
-
 
 
 // ----------------------------------------------------------------------------------------
