@@ -11,6 +11,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const morgan = require('morgan'); //serves as a logging tool that tells us what is coming in
 const session = require('express-session');
+// ! add connect-mongo if want to stay signed in via session every time server restarts
+// ! I can find connect-mongo in Level Up section of MEN Stack Session Auth
 
 //auth router holds all the authorization endpoints / importing the authRouter
 const authController = require("./controllers/auth.js");
