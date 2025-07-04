@@ -21,7 +21,9 @@
 
 
 <!-- Sign-in creates connect.sid cookies in dev tools. SID = session id. It remembers who you are between webpages-->
+    <!-- If user exists -->
     <% if (user) { %>
+        <!-- then render this -->
         <h1>Welcome to the KindUp Movement, <%= user.username %>!</h1>
         <p>This is an app for creating random acts of kindness & upleveling the world!</p>
         
