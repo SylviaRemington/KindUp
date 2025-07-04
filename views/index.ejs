@@ -16,9 +16,23 @@
             <!-- ! These target blank above are not working and not sure why -->
         </ul>
     </nav>
-
+<!-- 
     <h1>Welcome to the KindUp Movement!</h1>
-    <p>This is an app for creating random acts of kindness & upleveling the world! &#128516; </p>
+    <p>This is an app for creating random acts of kindness & upleveling the world! &#128516; </p> -->
+
+    <% if (user) { %>
+        <h1>Welcome to the KindUp Movement, <%= user.username %>!</h1>
+        <p>This is an app for creating random acts of kindness & upleveling the world! &#128516; </p>
+
+        <% } else { %>
+            <h1>Welcome to the KindUp Movement!, guest.</h1>
+            <p>This is an app for creating random acts of kindness & upleveling the world! &#128516; </p>
+            <p>
+                <a href="/auth/sign-up">Sign Up</a> or 
+                <a href="/auth/sign-in">Sign In</a>.
+                <!-- ! FIGURE OUT WHICH OF THESE 2 VERSIONS I'D LIKE TO ADD FOR SIGN-UP & SIGN-IN -->
+            </p>
+            <% } %>
 
     <br>
 
@@ -28,7 +42,6 @@
      <!-- Note: Wanted to have the homepage not to be navigated away from; thus used, target=_blank to open these links in a new page. -->
     <a href="/kindacts" target="_blank">Browse Kind Acts</a> &nbsp;
     <a href="/kindacts/new" target="_blank">Add New Kind Act</a> 
-
 
 </body>
 

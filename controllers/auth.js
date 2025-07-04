@@ -72,15 +72,15 @@ router.post("/sign-in", async (req, res) => {
     // Now need to create the logic to make sure user exists
     // We have to get the user before we check that password.
 
-    // FIRST GET THE USER FROM THE DATABASE
+    // FIRST GET THE USER FROM THE DATABASE & CHECK IF THEY EXIST
     const userInDatabase = await User.findOne({username: req.body.username});
 
-    // if no user in database
+    // IF NO USER IN DATABASE (Here is where we are checking if they exist.)
     if (!userInDatabase) {
         return res.send('Login failed. Please try again.');
     }
 
-    // WHEN THERE IS A USER: TIME TO TEST THEIR PASSWORD WITH BCRYPT
+    // CHECKING THEIR PASSWORD - WHEN THERE IS A USER: TIME TO TEST THEIR PASSWORD WITH BCRYPT
     const validPassword = bcrypt.compareSync(
         req.body.password, //the password the user put in
         userInDatabase.password //the encrypted version of that password
