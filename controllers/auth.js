@@ -111,6 +111,8 @@ router.post("/sign-in", async (req, res) => {
 // router.get('/sign-out', (req, res) => {
 //     res.send('Sign-Out Page');
 // });
+
+// SIGN-OUT ROUTE - just deleting a session
 router.get('/sign-out', (req, res) => {
     req.session.destroy();
     res.redirect("/");
