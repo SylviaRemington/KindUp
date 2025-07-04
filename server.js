@@ -103,6 +103,15 @@ app.get('/', async (req, res) => {
     }); 
 });
 
+app.get("/vip-lounge", (req, res) => {
+  if (req.session.user) {
+    res.send(`Welcome to the Kind Movement party & VIP lounge, ${req.session.user.username}!`);
+  } else {
+    res.send("Sorry, no sign-in allowed, no soup for you.");
+  }
+});
+
+
 
 // INDEX ROUTE - for index-of-kind-acts.ejs - /KINDACTS ---------------------------------
 app.get('/kindacts', async (req,res) => {
