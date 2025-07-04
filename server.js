@@ -64,7 +64,7 @@ app.use(methodOverride("_method")); // method override so I can do PUT and DELET
 app.use(morgan("dev")); // morgan for logging / logging http requests
 
 //Express-Session Module in the middleware
-//Need to check authentication before we go into any controllers - so putting above controllers
+//Need to check authentication before we go into any controller functions - so putting above controllers - e.g. /auth & authController below
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
