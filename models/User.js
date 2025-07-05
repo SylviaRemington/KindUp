@@ -1,4 +1,5 @@
 // Need to put users into the database - So need to create model for it
+// This User.js model was created during auth section & correlates with that.
 
 const mongoose = require('mongoose');
 
