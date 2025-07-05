@@ -13,3 +13,14 @@ You don’t need a new file.
 
 */
 
+// I want to use a comment schema that has:
+// TEXT - STRING - this would be the actual comment the user wrote
+// USER - NEED OBJECT ID - References the user who wrote the comment & links user to the text-string-comment
+// KINDACT - NEED OBJECT ID - Links the kindact to the comment (so that if I want to look up all the comments for one kindact, I have that option.)
+// CREATED TIMESTAMP with date/time - DATE - So creating a timestamp of when the comment was created.
+const mongoose = require('mongoose');
+
+const commentSchema = new mongoose.Schema ({
+
+})
+
