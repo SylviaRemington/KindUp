@@ -1,4 +1,7 @@
 // KindUp App - An app for creating random acts of kindness & upleveling the world
+// Note to self: added basic CRUD functionality & basic signin/signup auth functionality
+// Still need to create a user relationship - with mongoose relationships (either embedded or reference)
+// And still need to add css to app for basic MVP
 
 
 // -----------------------------IMPORTS----------------------------------------------------
