@@ -20,6 +20,7 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model('User', userSchema);
+// 'User' is where you register the model as 'User' -- and then that info will be put into the todo model under ref: 'User' for the assignee thing 
 
 module.exports = User;
 
