@@ -1,1 +1,1 @@
-// Comment Schema
+// Comment Schema Model
