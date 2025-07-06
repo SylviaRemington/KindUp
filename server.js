@@ -109,7 +109,8 @@ app.get('/', async (req, res) => {
 
 app.get("/vip-lounge", (req, res) => {
   if (req.session.user) {
-    res.send(`Welcome to the Kind Movement Partaaay and VIP Lounge, ${req.session.user.username}!`);
+    res.send(`Welcome to the Kind Movement Partaaay and VIP Lounge, ${req.session.user.username}! This is a place to share ideas & experiences as a VIP member!`);
+    // ! Need to build this out as a stretch goal if I have time.
   } else {
     res.send("Sorry, no sign-in allowed. You aren't an existing user yet. But we'd love to have you!");
   }
