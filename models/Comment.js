@@ -20,16 +20,20 @@ You don’t need a new file.
 
 const mongoose = require('mongoose');
 const KindAct = require('./KindAct');
+const User = require('./User');
 
 const commentSchema = new mongoose.Schema ({
-    text: { type: String, require: true, unique: true}, //should i put unique for comment? Does this prevent multiples of same comment? Or does it make it so user can only comment once?
+    text: { type: String, require: true }, 
+    //I took off unique: true for comments just in case someone else wrote a similar comment like "Awesome!" - Don't want to limit the amount of times someone says that. lol
+    //Original question: should i put unique for comment? Does this prevent multiples of same comment? Or does it make it so user can only comment once?
     
     user: { type: mongoose.Schema.Types.ObjectId, require: true, ref: 'User' }, // type is object id but not sure how to write it correctly - need to research this
     // ref: 'User' refers to the User Model
      
-    KindAct: { type: mongoose.Schema.Types.ObjectId, require: true, ref: 'KindAct'},
+    kindact: { type: mongoose.Schema.Types.ObjectId, require: true, ref: 'KindAct'},
     // would I use KindAct or kindAct for this key:value pair??? Ask Tristan or Purvi
     // ref: 'KindAct' refers to the KindAct Model
+    // Decided to use lower case for key. Researched it and this is the appropriate naming convention for this.
     
     timestamp: {},
 
@@ -38,4 +42,4 @@ const commentSchema = new mongoose.Schema ({
 module.exports = new mongoose.Model('Comment', commentSchema); //exporting schema model
 
 
-
+//
