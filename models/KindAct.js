@@ -21,4 +21,6 @@ module.exports = KindAct;
 // module.exports = mongoose.model('KindAct', kindActSchema);
 
 // Maybe should be putting the comment schema in the KindAct scheme??? --still unsure how to make those two work together.
+// 34 minutes 40 seconds in Skyrockit Part One - tristan references this but it doesn't make sense to me yet.
+
 
