@@ -23,9 +23,14 @@ const KindAct = require('./KindAct');
 
 const commentSchema = new mongoose.Schema ({
     text: { type: String, require: true, unique: true}, //should i put unique for comment? Does this prevent multiples of same comment? Or does it make it so user can only comment once?
-    user: { }, // type is object id but not sure how to write it correctly - need to research this
-    KindAct: {},
+    
+    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, // type is object id but not sure how to write it correctly - need to research this
+    // ref: 'User' refers to the User Model
+     
+    KindAct: { type: mongoose.Schema.Types.ObjectId, ref: 'KindAct'},
     // would I use KindAct or kindAct for this key:value pair??? Ask Tristan or Purvi
+    // ref: 'KindAct' refers to the KindAct Model
+    
     timestamp: {},
 
 
