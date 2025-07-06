@@ -33,7 +33,9 @@ const commentSchema = new mongoose.Schema ({
     
     timestamp: {},
 
+});
+
+module.exports = new mongoose.Model('Comment', commentSchema); //exporting schema model
 
 
-})
 
