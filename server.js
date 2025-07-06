@@ -106,6 +106,8 @@ app.get('/', async (req, res) => {
       // And this is now stored in the browser. //If the session is still there, then the user stays logged in.
       // MAKING SURE YOU'RE SIGNED IN.
       user: req.session.user,
+      // This gives the page access to the person who is currently signed in, so it can show their name or custom links.
+      // I am giving this page a variable named user, and that variable holds the signed-in user’s info from the session — so the page knows who is logged in and can show the right things like “Welcome” or “Sign Out.”
     }); 
 });
 
