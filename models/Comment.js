@@ -19,8 +19,8 @@ You don’t need a new file.
 
 
 const mongoose = require('mongoose');
-const KindAct = require('./KindAct');
-const User = require('./User');
+const KindAct = require('./KindAct'); //do I add this here? Or only to the controller? I'm confused about this.
+const User = require('./User'); //do I add this here? Or only to the controller?
 
 const commentSchema = new mongoose.Schema ({
     text: { type: String, require: true }, 
