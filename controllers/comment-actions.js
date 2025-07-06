@@ -17,3 +17,7 @@ include the logged-in user's ID in the data you save. // REVIEW OLD Mongoose Rel
 
 */
 
+// const KindAct = require('./KindAct'); 
+// const User = require('./User'); 
+const KindAct = require('../models/KindAct'); //import our models
+const User = require("../models/User.js"); //import our models
