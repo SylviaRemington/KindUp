@@ -87,6 +87,8 @@ app.use("/auth", authController); //invoke auth here / importing auth here / Thi
 
 // -----------------------------ROUTES-----------------------------------------------------
 
+// ! I'm still confused (after watching Skyrockit Lectures) as to how to move all these routes in server.js to controllers and how to separate them out.
+
 // TEST ROUTE TO CONFIRM SERVER IS WORKING PROPERLY
 // app.get('/', (req, res) => {
 //   res.send('Hello, all you supahstaaars out there!')
