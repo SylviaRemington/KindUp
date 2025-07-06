@@ -19,8 +19,16 @@ You don’t need a new file.
 
 
 const mongoose = require('mongoose');
+const KindAct = require('./KindAct');
 
 const commentSchema = new mongoose.Schema ({
+    text: {},
+    user: {},
+    KindAct: {},
+    // would I use KindAct or kindAct for this key:value pair??? Ask Tristan or Purvi
+    timestamp: {},
+
+
 
 })
 
