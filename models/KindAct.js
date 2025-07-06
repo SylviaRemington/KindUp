@@ -19,3 +19,6 @@ module.exports = KindAct;
 
 // This version below defines and exports the model in one step. Could use this too instead of lines 9-13.
 // module.exports = mongoose.model('KindAct', kindActSchema);
+
+// Maybe should be putting the comment schema in the KindAct scheme??? --still unsure how to make those two work together.
+
