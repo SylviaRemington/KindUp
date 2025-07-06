@@ -80,7 +80,8 @@ app.use(
   })
 );
 
-// Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section//invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
+// Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section here
+app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
 
 
 
