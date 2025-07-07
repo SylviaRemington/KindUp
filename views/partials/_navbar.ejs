@@ -3,12 +3,13 @@
 <!-- My version that might work - saving and then tweaking it -->
 <nav>
   <% if (user) { %>
-    <span>Welcome, <%= user.username %>!</span>
+    <span>Hi, <%= user.username %>!</span>
     <a href="/kindacts">Browse Kind Acts</a>
     <a href="/kindacts/new">Add New Kind Act</a>
     <a href="/auth/sign-out">Sign Out</a>
   <% } else { %>
-    <a href="/auth/sign-in">Sign In</a>
     <a href="/auth/sign-up">Sign Up</a>
+    <a href="/auth/sign-in">Sign In</a>
+
   <% } %>
 </nav>
