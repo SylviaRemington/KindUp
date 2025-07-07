@@ -3,6 +3,16 @@
 // Note to self: Create a user relationship (connecting user to comment) - with mongoose relationships & used referencing/reference relationship since it's better long term than embedded.
 // Note to self: Added middleware to stay signed in.
 // ! Still need to add css to app for basic MVP
+// ! Still need to deploy online
+// ! Still need to add the following to my README:
+/* 
+Screenshot/Logo: A screenshot of your app or a logo.
+Your app's name: Include a description of your app and its functionality. Background info about the app and why you built it is a nice touch.
+Getting Started: Includes a link to the deployed app and link to any planning materials.
+Attributions: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
+Technologies Used: List of the technologies used, for example: JavaScript and any major frameworks or libraries.
+Next Steps: Planned future enhancements (stretch goals).
+*/
 
 
 // -----------------------------IMPORTS----------------------------------------------------
