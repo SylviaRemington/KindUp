@@ -83,6 +83,16 @@ app.use(
 // Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section here
 app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
 
+// ! Creating using middleware, as per project requirements, to restrict access to 
+// ! specific features (authorization), ensuring they are not accessible to anonymous users. // kinda confused about this part
+// ! DOUBLE CHECK IF DOING THIS PART CORRECTLY -- don't fully understand this below and why i need it (when I'm already logged in).
+function requireLogin(req, res, next) {
+  if (!req.session.user) {
+    return res.redirect('/auth/sign-in');
+  }
+  next();
+}
+
 
 
 // -----------------------------ROUTES-----------------------------------------------------
