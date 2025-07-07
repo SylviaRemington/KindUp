@@ -18,13 +18,13 @@ const session = require('express-session');
 // Add connect-mongo if want to stay signed in via session every time server restarts
 // If I decide to use it, I can find connect-mongo in Level Up section of MEN Stack Session Auth
 
-//auth router holds all the authorization endpoints / importing the authController
+// Auth Router holds all the authorization endpoints / importing the authController
 const authController = require('./controllers/auth.js');
 
-// comment router / importing the commentController
+// Comment Router / importing the commentController
 const commentController = require('./controllers/comment-actions.js');
 
-// importing KindAct model into server.js
+// Importing KindAct model into server.js
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
 // connect-flash allows a success message to pop up after sign up or sign in
