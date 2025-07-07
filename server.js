@@ -13,6 +13,7 @@ Attributions: This section should include links to any external resources (such 
 Technologies Used: List of the technologies used, for example: JavaScript and any major frameworks or libraries.
 Next Steps: Planned future enhancements (stretch goals).
 */
+// ! 1st Stretch Goal - connect-flash section - need to build this out so get success message after signup & sign in - e.g. "You've successfully signed up!" & "You've successfully signed in!"
 
 
 // -----------------------------IMPORTS----------------------------------------------------
