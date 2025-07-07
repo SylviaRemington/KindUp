@@ -30,8 +30,41 @@ router.get('/test', (req, res) => {
   res.send('TEST MESSAGE: Comment controller is connected and working.');
 });
 
-// Create the comment
+// Create the comment route
+router.post('/', async (req, res) => {
 
+    try {
+        //Creates a new comment in the database.
+        const comment = await Comment.create({
+            
+            //This below saves comment into the database. (It takes the text the user typed in the form, and saves it in the text field of the comment in the database.)
+            text: req.body.text,
+
+            //This below links the comment to the logged-in user by grabbing their user id from the session.
+            user: req.session.user._id,
+
+            //This below links the comment to the specific KindAct by using the hidden input from the form.
+            kindact: req.body.kindactId
+        });//Done creating the comment part
+
+        //Finds the KindAct the comment belongs to
+        const kindact = await KindAct.findById(req.body.kindactId);
+
+        //This below adds the comment id to the KindAct's list of comments.
+        kindact.comments.push(comment._id);
+
+        //This below saves the updated KindAct with the new comment attached.
+        await kindact.save();
+
+        //After saving, this sends the user back to the showpage so that they can see their comment.
+        res.redirect(`/kindacts/${req.body.kindactId}`);
+
+    //If something goes wrong, this then shows an error message.
+    } catch (err) {
+        console.log(err);
+        res.send('Error posting comment.');
+    }
+});
 
 
 // Delete the comment
