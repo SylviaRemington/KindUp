@@ -129,7 +129,6 @@ function requireLogin(req, res, next) {
   next();
 }
 
-
 // ! connect-flash -- Add connect-flash middleware here & change secret portion
 app.use(session({
   secret: 'your secret here',
