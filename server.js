@@ -122,6 +122,7 @@ that means the session does not have a saved user, so the person is not signed i
 If there is no req.session.user, send them to the sign-in page.
 If there is a req.session.user, it means the person is signed in,
 so call next() and let them continue to the page they were trying to visit.” */
+// Could also make this function and call it 'isLoggedIn' but requireLogin works better for me right now with understanding it.
 function requireLogin(req, res, next) {
   if (!req.session.user) {
     return res.redirect('/auth/sign-in');
