@@ -1,8 +1,8 @@
 // KindUp App - An app for creating random acts of kindness & upleveling the world
-// Note to self: added basic CRUD functionality & basic signin/signup auth functionality
-// Still need to create a user relationship - with mongoose relationships (either embedded or reference)
-// Still need to add css to app for basic MVP
-// Still need to add middleware to stay signed in 
+// ! Note to self: added basic CRUD functionality & basic signin/signup auth functionality
+// ! Still need to create a user relationship - with mongoose relationships (either embedded or reference)
+// ! Still need to add css to app for basic MVP
+// ! Still need to add middleware to stay signed in 
 
 
 // -----------------------------IMPORTS----------------------------------------------------
@@ -16,14 +16,12 @@ const methodOverride = require('method-override');
 const morgan = require('morgan'); //serves as a logging tool that tells us what is coming in
 const session = require('express-session');
 // Add connect-mongo if want to stay signed in via session every time server restarts
-// I can find connect-mongo in Level Up section of MEN Stack Session Auth
+// If I decide to use it, I can find connect-mongo in Level Up section of MEN Stack Session Auth
 
 //auth router holds all the authorization endpoints / importing the authRouter
 const authController = require("./controllers/auth.js");
 
-
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
-
 
 
 // -----------------------------PORT SETUP-------------------------------------------------
@@ -49,7 +47,7 @@ mongoose.connection.on('connected', () => {
     console.log(`Connected to MongoDB ${mongoose.connection.name}`)
 });
 
-// ERROR TROUBLESHOOTING
+// ERROR TROUBLESHOOTING CODE
 // mongoose.connection.on('error', err => {
 //   console.error('MongoDB connection error:', err);
 // });
@@ -58,11 +56,11 @@ mongoose.connection.on('connected', () => {
 // -----------------------------MIDDLEWARE-------------------------------------------------
 
 
-app.use(express.urlencoded({ extended: false })); //allows us to get request bodies
+app.use(express.urlencoded({ extended: false })); //allows us to get request bodies (e.g. req.body)
 //If using html forms that send data using POST, must use the above code.
-//This middleware parses incoming request bodies, extracting form data and converting it 
+//"This middleware parses incoming request bodies, extracting form data and converting it 
 // into a JavaScript object. It then attaches this object to the req.body property of the 
-// request, making the form data easily accessible within our route handlers. (this explanation is from chatgpt and me trying to understand middleware.)
+// request, making the form data easily accessible within our route handlers." (this explanation is from chatgpt and me trying to understand middleware.)
 // Note: got this explanation from ChatGPT. And slightly tweaking it to fit my understanding of how Middleware looks.
 
 app.use(methodOverride("_method")); // method override so I can do PUT and DELETE requests
@@ -84,11 +82,12 @@ app.use(
 // Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section here
 app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
 
-// ! Creating using middleware, as per project requirements, to restrict access to 
-// ! specific features (authorization), ensuring they are not accessible to anonymous users. // kinda confused about this part
+// ! Creating using middleware, as per project requirements, "to restrict access to 
+// ! specific features (authorization), ensuring they are not accessible to anonymous users." // kinda confused about this part
 // ! DOUBLE CHECK IF DOING THIS PART CORRECTLY -- don't fully understand this below and why i need it (when I'm already logged in).
 // Creating a function that says you can't go to the page unless you're logged in.
-/* FURTHER EXPLANATION OF THIS: “Make a function called isLoggedIn.
+/* FURTHER EXPLANATION OF THIS: 
+“Make a function called isLoggedIn.
 It takes in three things:
 req, which is the incoming request from the browser,
 res, which is the response we’ll send back,
@@ -133,7 +132,7 @@ app.get('/', async (req, res) => {
     }); 
 });
 
-app.get("/vip-lounge", (req, res) => {
+app.get("/vip-lounge", requireLogin, (req, res) => {
   if (req.session.user) {
     res.send(`Welcome to the Kind Movement Partaaay and VIP Lounge, ${req.session.user.username}! This is a place to share ideas & experiences as a VIP member!`);
     // ! Need to build this out as a stretch goal if I have time.
@@ -144,7 +143,7 @@ app.get("/vip-lounge", (req, res) => {
 
 
 // INDEX ROUTE - for index-of-kind-acts.ejs - /KINDACTS ---------------------------------
-app.get('/kindacts', async (req,res) => {
+app.get('/kindacts', requireLogin, async (req,res) => {
   const allKindActs = await KindAct.find(); //setting up finding KindActs in database
   res.render("kindacts/index-of-kind-acts.ejs", { kindacts: allKindActs });
 });
@@ -165,7 +164,7 @@ EXPLANATION OF WHAT ABOVE CODE IS DOING FOR kindacts: allKindActs part - note fo
 // });
 
 // POST ROUTE - for new.ejs - /KINDACTS
-app.post('/kindacts', async (req, res) => {
+app.post('/kindacts', requireLogin, async (req, res) => {
   // Convert checkbox values to true/false
   req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
   req.body.isBrandNew = req.body.isBrandNew === 'on'; //request body is the data from the form
@@ -185,7 +184,7 @@ app.post('/kindacts', async (req, res) => {
 // ----------------------------------------------------------------------------------------
 
 // NEW ROUTE - for new.ejs - /KINDACTS/NEW
-app.get('/kindacts/new', async (req, res) => { //this is the url route
+app.get('/kindacts/new', requireLogin, async (req, res) => { //this is the url route
   res.render('kindacts/new.ejs'); //this is a file path relative to views/
 });
 
@@ -193,7 +192,7 @@ app.get('/kindacts/new', async (req, res) => { //this is the url route
 // ----------------------------------------------------------------------------------------
 
 // SHOWPAGE ROUTE - /KINDACTS/:KINDACTID - to make links from index-of-kind-acts.ejs dynamic
-app.get('/kindacts/:kindactId', async (req, res) => {
+app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
   const foundKindAct = await KindAct.findById(req.params.kindactId); //requesting the parameters of the url
   // console.log(foundKindAct);
   // res.send(`This route renders the showpage for title: ${req.params.kindactId}.`);
@@ -205,7 +204,7 @@ app.get('/kindacts/:kindactId', async (req, res) => {
 });
 
 // DELETE ROUTE - on showpage
-app.delete('/kindacts/:kindactId', async (req, res) => {
+app.delete('/kindacts/:kindactId', requireLogin, async (req, res) => {
   // res.send("This is the delete route.");
   const kindactId = req.params.kindactId;
   await KindAct.findByIdAndDelete(kindactId);
@@ -213,7 +212,7 @@ app.delete('/kindacts/:kindactId', async (req, res) => {
 });
 
 // PUT ROUTE - ON /KINDACTS/:KINDACTID 
-app.put('/kindacts/:kindactId', async (req, res) => {
+app.put('/kindacts/:kindactId', requireLogin, async (req, res) => {
   if (req.body.isTestedRandomActOfKindness === 'on') {
     req.body.isTestedRandomActOfKindness = true;
   } else {
@@ -237,7 +236,7 @@ app.put('/kindacts/:kindactId', async (req, res) => {
 // ----------------------------------------------------------------------------------------
 
 // EDIT ROUTE - /kindacts/:kindactId/edit
-app.get('/kindacts/:kindactId/edit', async (req, res) => {
+app.get('/kindacts/:kindactId/edit', requireLogin, async (req, res) => {
   // res.send(`This is the edit page for ${req.params.kindactId}`);
   //update defining route so more dynamic and works with edit page and communicates with database
   const foundKindActForEditPage = await KindAct.findById(req.params.kindactId);
@@ -247,7 +246,7 @@ app.get('/kindacts/:kindactId/edit', async (req, res) => {
 
 // ----------------------------------------------------------------------------------------
 
-// ----------Starts the app and tells it to listen for requests on PORT (3000)-------------
+// Starts the app and tells it to listen for requests on PORT (3000)
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
