@@ -101,6 +101,7 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 
 ## Resources/Credits
 https://www.theliberators.org/social-experiments
+https://www.petersharp.com.au/
 
 
 
