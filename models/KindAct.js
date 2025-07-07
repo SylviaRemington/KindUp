@@ -8,6 +8,7 @@ const kindActSchema = new mongoose.Schema({
   description: String,
   isTestedRandomActOfKindness: Boolean,
   isBrandNew: Boolean,
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }],
 });
 
 // Defining the model:
