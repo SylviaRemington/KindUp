@@ -216,7 +216,8 @@ app.get('/kindacts/new', requireLogin, async (req, res) => { //this is the url r
 // SHOWPAGE ROUTE - /KINDACTS/:KINDACTID - to make links from index-of-kind-acts.ejs dynamic
 app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
   
-  //requesting the parameters of the url
+  // This gets the ID from the URL — the part after /kindacts/ (e.g. /kindacts/64a7b2fcd847c12345abcd) — and uses it to find one specific Kind Act in the database.
+  // So, it's requesting the parameters of the url // It's requesting the kindactId.
   const foundKindAct = await KindAct.findById(req.params.kindactId).populate({
     path: 'comments',
     populate: {path: 'user'}
