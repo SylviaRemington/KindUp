@@ -30,7 +30,7 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 
 - **Auth & Permissions:** Only creators can edit or delete their own kind acts, with route protection in place.
 
-- **Kindness Metadata:** Each act includes title, description, and custom checkboxes for unique kindness types - e.g. If the kind act is a tried-and-true-tested act or brand new!
+- **Kindness Metadata:** Each act includes title, description, and custom checkboxes for unique kindness types - e.g. If the kind act is a tried-and-true-tested act or brand new, there will be a notation under the description of the kind act!
 
 
 ## Tech Stack
