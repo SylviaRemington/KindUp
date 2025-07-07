@@ -18,19 +18,18 @@ const session = require('express-session');
 // Add connect-mongo if want to stay signed in via session every time server restarts
 // If I decide to use it, I can find connect-mongo in Level Up section of MEN Stack Session Auth
 
-// connect-flash allows a success message to pop up after sign up or sign in
-// ! need to finish the rest of this and build this out
-const flash = require('connect-flash');
-
 //auth router holds all the authorization endpoints / importing the authController
 const authController = require('./controllers/auth.js');
 
 // comment router / importing the commentController
 const commentController = require('./controllers/comment-actions.js');
 
-
+// importing KindAct model into server.js
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
+// connect-flash allows a success message to pop up after sign up or sign in
+// ! need to finish the rest of this and build this out
+const flash = require('connect-flash');
 
 // -----------------------------PORT SETUP-------------------------------------------------
 
@@ -87,11 +86,13 @@ app.use(
   })
 );
 
-
 // authController - Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section here
 app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
 
-//commentController
+//commentController - If a request starts with /comments, it redirects these particular routes & requests to the commentController (which contains the logi for these routes).
+// It connects the /comments url to my comment-actions.js file
+// If someone submits a comment POST form, it will check/match that url & run the login inside controllers/comment-actions.js
+// It only runs middleware (router middleware) for urls which start with /comments
 app.use('/comments', commentController);
 
 
