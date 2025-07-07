@@ -87,8 +87,7 @@ app.use("/auth", authController); //invoke auth here / importing auth here / Thi
 // ! Creating using middleware, as per project requirements, to restrict access to 
 // ! specific features (authorization), ensuring they are not accessible to anonymous users. // kinda confused about this part
 // ! DOUBLE CHECK IF DOING THIS PART CORRECTLY -- don't fully understand this below and why i need it (when I'm already logged in).
-// Function saying you can't go to the page unless you're logged in.
-
+// Creating a function that says you can't go to the page unless you're logged in.
 /* FURTHER EXPLANATION OF THIS: “Make a function called isLoggedIn.
 It takes in three things:
 req, which is the incoming request from the browser,
