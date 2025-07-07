@@ -124,9 +124,11 @@ If there is a req.session.user, it means the person is signed in,
 so call next() and let them continue to the page they were trying to visit.” */
 // Could also make this function and call it 'isLoggedIn' but requireLogin works better for me right now with understanding it.
 function requireLogin(req, res, next) {
+  //When the user signs in, we put a session on the user & pass it around the request response cycle
   if (!req.session.user) {
     return res.redirect('/auth/sign-in');
   }
+  //If user is logged in, it goes to next; otherwise, it redirects back to sign in page.
   next();
 }
 
