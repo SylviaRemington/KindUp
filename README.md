@@ -22,15 +22,15 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 
 - **KindAct Dashboard:** Logged-in users can create, read, update, and delete their own acts of kindness.
 
-- **Public Kind Acts Catalogue of Ideas You Can Use for Random Acts Of Kindness:** Anyone can browse all submitted kind acts on the index page.
+- **Public Kind Acts Catalogue of Ideas You Can Use for Random Acts Of Kindness:** Logged-In Users can browse all submitted kind acts on the kind acts index page.
 
 - **User Comments:** Registered users can leave thoughtful comments on individual kind acts.
 
-- **Likes System:** Users can “like” a kindness, with each like tied to their user account.
+- **Likes System:** (Future Stretch Goal) Users can “like” a kindness, with each like tied to their user account.
 
 - **Auth & Permissions:** Only creators can edit or delete their own kind acts, with route protection in place.
 
-- **Kindness Metadata:** Each act includes title, description, and custom checkboxes for unique kindness types.
+- **Kindness Metadata:** Each act includes title, description, and custom checkboxes for unique kindness types - e.g. If the kind act is a tried-and-true-tested act or brand new!
 
 
 ## Tech Stack
@@ -41,6 +41,13 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 - **MongoDB** – my database for storing Kind Acts, User Accounts, Comments, and Likes
 - **CSS** – for basic styling, layout, & visual formatting (inside a public/ directory)
 - **Session-based authentication** – using express-session to track logged-in users / manages user login sessions for authentication
+- **dotenv** - environment variables from an .env file & loads session secret for further safety of data
+- **method-override** - lets forms use PUT & DELETE methods / overrides the GET & POST
+- **morgan** - logs http requests to the terminal for debugging purposes
+- **express-session** - for user-login sessions / manages user-login sessions
+- **bcrypt** - for password encryting / securely encrypts passwords for storage & comparison
+- **connect-flash** - creates success alerts for better user experience once they sign-up or sign-in
+
 
 ## Setup & Installation Requirements
 #### MVP Requirements for Application Project:
