@@ -2,7 +2,7 @@
 // ! Note to self: added basic CRUD functionality & basic signin/signup auth functionality
 // ! Still need to create a user relationship - with mongoose relationships (either embedded or reference)
 // ! Still need to add css to app for basic MVP
-// ! Still need to add middleware to stay signed in 
+// ! Still need to add middleware to stay signed in - I think I have this now but double check tomorrow
 
 
 // -----------------------------IMPORTS----------------------------------------------------
