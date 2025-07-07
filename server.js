@@ -86,6 +86,18 @@ app.use("/auth", authController); //invoke auth here / importing auth here / Thi
 // ! Creating using middleware, as per project requirements, to restrict access to 
 // ! specific features (authorization), ensuring they are not accessible to anonymous users. // kinda confused about this part
 // ! DOUBLE CHECK IF DOING THIS PART CORRECTLY -- don't fully understand this below and why i need it (when I'm already logged in).
+// Function saying you can't go to the page unless you're logged in.
+
+/* FURTHER EXPLANATION OF THIS: “Make a function called isLoggedIn.
+It takes in three things:
+req, which is the incoming request from the browser,
+res, which is the response we’ll send back,
+and next, which means ‘move forward to the next step if allowed.’
+Inside the function, check if req.session.user is missing —
+that means the session does not have a saved user, so the person is not signed in.
+If there is no req.session.user, send them to the sign-in page.
+If there is a req.session.user, it means the person is signed in,
+so call next() and let them continue to the page they were trying to visit.” */
 function requireLogin(req, res, next) {
   if (!req.session.user) {
     return res.redirect('/auth/sign-in');
