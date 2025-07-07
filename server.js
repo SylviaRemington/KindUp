@@ -18,6 +18,10 @@ const session = require('express-session');
 // Add connect-mongo if want to stay signed in via session every time server restarts
 // If I decide to use it, I can find connect-mongo in Level Up section of MEN Stack Session Auth
 
+// connect-flash allows a success message to pop up after sign up or sign in
+const flash = require('connect-flash');
+
+
 //auth router holds all the authorization endpoints / importing the authRouter
 const authController = require("./controllers/auth.js");
 
@@ -79,7 +83,17 @@ app.use(
   })
 );
 
-// Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section here
+// ! connect-flash -- Add connect-flash middleware here & change secret portion
+app.use(session({
+  secret: 'your secret here',
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(flash());
+
+
+// authController - Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section here
 app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
 
 // ! Creating using middleware, as per project requirements, "to restrict access to 
