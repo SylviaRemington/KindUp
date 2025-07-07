@@ -215,7 +215,19 @@ app.get('/kindacts/new', requireLogin, async (req, res) => { //this is the url r
 
 // SHOWPAGE ROUTE - /KINDACTS/:KINDACTID - to make links from index-of-kind-acts.ejs dynamic
 app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
-  const foundKindAct = await KindAct.findById(req.params.kindactId); //requesting the parameters of the url
+  
+  //requesting the parameters of the url
+  const foundKindAct = await KindAct.findById(req.params.kindactId).populate({
+    path: 'comments',
+    populate: {path: 'user'}
+  }); 
+  // What everything after populate does:
+  // It loads all comments & loads all the user info for each comment.
+  // populate({ path: 'comments' }): This goes and fetches all the comment documents connected to the KindAct.
+  // populate: { path: 'user' }: This goes, and for each comment, it also fetches the user document linked/connected to that comment.
+  // From adding this populate function to my showroute, it now allows me to go to showpage at show.ejs and write <%= comment.user.username %>, because now user is loaded in system and available (and not just an id)
+
+
   // console.log(foundKindAct);
   // res.send(`This route renders the showpage for title: ${req.params.kindactId}.`);
   // res.send(`This route renders the showpage for the Kind Act named: ${foundKindAct.title}.`);
