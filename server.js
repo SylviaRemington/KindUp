@@ -19,11 +19,15 @@ const session = require('express-session');
 // If I decide to use it, I can find connect-mongo in Level Up section of MEN Stack Session Auth
 
 // connect-flash allows a success message to pop up after sign up or sign in
+// ! need to finish the rest of this and build this out
 const flash = require('connect-flash');
 
+//auth router holds all the authorization endpoints / importing the authController
+const authController = require('./controllers/auth.js');
 
-//auth router holds all the authorization endpoints / importing the authRouter
-const authController = require("./controllers/auth.js");
+// comment router / importing the commentController
+const commentController = require('./controllers/comment-actions.js');
+
 
 const KindAct = require('./models/KindAct.js'); //importing the model into server.js
 
@@ -83,18 +87,13 @@ app.use(
   })
 );
 
-// ! connect-flash -- Add connect-flash middleware here & change secret portion
-app.use(session({
-  secret: 'your secret here',
-  resave: false,
-  saveUninitialized: false
-}));
-
-app.use(flash());
-
 
 // authController - Sensitive data can come from our controllers, so we want to check authentication before we proceed to controllers section here
 app.use("/auth", authController); //invoke auth here / importing auth here / This goes from here to the controller file and finds the auth
+
+//commentController
+app.use('/comments', commentController);
+
 
 // ! Creating using middleware, as per project requirements, "to restrict access to 
 // ! specific features (authorization), ensuring they are not accessible to anonymous users." // kinda confused about this part
@@ -119,6 +118,14 @@ function requireLogin(req, res, next) {
 }
 
 
+// ! connect-flash -- Add connect-flash middleware here & change secret portion
+app.use(session({
+  secret: 'your secret here',
+  resave: false,
+  saveUninitialized: false
+}));
+
+app.use(flash());
 
 // -----------------------------ROUTES-----------------------------------------------------
 
