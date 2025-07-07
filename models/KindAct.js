@@ -8,6 +8,7 @@ const kindActSchema = new mongoose.Schema({
   description: String,
   isTestedRandomActOfKindness: Boolean,
   isBrandNew: Boolean,
+  // Each KindAct can have many comments because it's an array & each comment is now linked by its Objectid. And then mongoose will use the Comment Model to populate it.
   comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment' }],
 });
 
