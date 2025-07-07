@@ -56,9 +56,8 @@
 
 
     <!-- Write COMMENTS SECTION here before script tag, since need all html to load for fully effective script tag functionality -->
-    <!-- ! Adding comments form here directly to showpage. That way, users can submit a comment while viewing the kind act. -->
-    <!-- ! Originally, going to make form on a separate file and page, but then user would have to go to a separate page and that would decrease UI. -->
-
+    <!-- Adding comments form here directly to showpage. That way, users can submit a comment while viewing the kind act. -->
+    <!-- Originally, going to make form on a separate file and page, but then user would have to go to a separate page and that would decrease UI. -->
     <!-- ! Also need to add/create a loop through comments & display them underneath the kind act and the comment form. Need to look up how to do that. -->
 
     <h3>Leave A Comment About Your Experience <br>with this KindAct and/or any comment!</h3>
@@ -70,12 +69,11 @@
     </form>
 
 
-    
 
     <!-- Warning Message Before Deletion -->
     <!-- Can't customize the browser's confirm() popup because it uses system's built in 'Ok' and 'Cancel'. If want to change it need to use my own custom modal popoup and not confirm() -->
     <!-- To customize popup need to add js at bottom of page, update my form above, and also add addtl html to show pages body. -->
-    <!-- ! If I have time, I'd like to customize "Ok" and "Cancel" to "Confirm Deletion" and "Keep Kind Act" for further UI clarity. -->
+    <!-- If I have time, I'd like to customize "Ok" and "Cancel" to "Confirm Deletion" and "Keep Kind Act" for further UI clarity. -->
     <script>
     const deleteFormPopup = document.getElementById("delete-form");
     deleteFormPopup.addEventListener("submit", function(event) {

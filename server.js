@@ -221,7 +221,7 @@ app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
     path: 'comments',
     populate: {path: 'user'}
   }); 
-  // What everything after populate does:
+  // What everything after .populate does:
   // It loads all comments & loads all the user info for each comment.
   // populate({ path: 'comments' }): This goes and fetches all the comment documents connected to the KindAct.
   // populate: { path: 'user' }: This goes, and for each comment, it also fetches the user document linked/connected to that comment.
