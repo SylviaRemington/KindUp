@@ -84,9 +84,10 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 - 
 
 #### Stretch Goals:
-- 
-- 
-- 
+- Commenting is fully functional and linked to user accounts. Edit/Delete features are planned as stretch goals.
+- Adding specific timeout for session - Changing from Express defaults timeouts of sessions to my own / Would need to add that to 
+- Also, adding a pop-up to warn 5 minutes before session timeout
+- Also, would like to add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it.)
 
 #### Known Bugs:
 - 

@@ -36,7 +36,7 @@ const commentSchema = new mongoose.Schema ({
     // Decided to use lower case for key. Researched it and this is the appropriate naming convention for this.
     
     timestamp: {},
-    //! Need to finish this part
+    //! Need to finish this part - stretch goal
     // idea for value above - { timestamps: true} - Not sure if this will work.
 
 });

@@ -1,6 +1,6 @@
 // KindUp App - An app for creating random acts of kindness & upleveling the world
 // Note to self: Added basic CRUD functionality & basic signin/signup auth functionality
-// Note to self: Create a user relationship - with mongoose relationships & used referencing/reference relationship since it's better long term than embedded.
+// Note to self: Create a user relationship (connecting user to comment) - with mongoose relationships & used referencing/reference relationship since it's better long term than embedded.
 // ! Still need to add css to app for basic MVP
 // ! Still need to add middleware to stay signed in - I think I have this now but double check tomorrow
 
@@ -138,7 +138,7 @@ app.use(flash());
 // });
 
 
-// HOMEPAGE ROUTE - / --------------------------------------------------------------------
+// HOMEPAGE ROUTE - '/' --------------------------------------------------------------------
 app.get('/', async (req, res) => {
     // res.send('Hello, friend! This will be our homepage once it has been set up!');
     res.render('index.ejs', {
