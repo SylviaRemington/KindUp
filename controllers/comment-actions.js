@@ -26,6 +26,9 @@ const KindAct = require('../models/KindAct'); //import our models
 const User = require("../models/User.js"); //import our models
 const Comment = require('../models/Comment'); //importing the models
 
+router.get('/test', (req, res) => {
+  res.send('TEST MESSAGE: Comment controller is connected and working.');
+});
 
 // Create the comment
 
