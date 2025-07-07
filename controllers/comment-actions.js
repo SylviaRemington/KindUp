@@ -66,8 +66,9 @@ router.post('/', async (req, res) => {
     }
 });
 
-
-// Delete the comment
+// ! Stretch Goals - create an edit comment section & delete comment section
+// Edit comment
+// Delete comment
 
 
 
