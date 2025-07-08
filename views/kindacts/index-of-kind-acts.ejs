@@ -19,14 +19,16 @@
             <p class="has-text-centered mb-4">
                 <strong>Click on a kind act to read about it or update/delete a kind act you've created!</strong>
             </p>
-            
-            <!-- Trying out versions of styles -->
-            <!-- Switched box to panel for more styling -->
-            <!-- <div class="panel is-info has-text-centered"> -->
-            <!-- <p class="panel-heading has-text-centered">Kind Acts</p> -->
 
-            <div class="has-background-info p-5 has-text-white">
-            <ul>
+                <ul class="box">
+            <% kindacts.forEach(kindact => { %>
+                <li class="mb-2">
+                <a href="/kindacts/<%= kindact._id %>" class="has-text-link"><%= kindact.title %></a>
+                </li>
+            <% }); %>
+            </ul>
+            
+
 
             <% kindacts.forEach(kindact => { %>
                 <a href="/kindacts/<%= kindact._id %>" class="panel-block is-active">
