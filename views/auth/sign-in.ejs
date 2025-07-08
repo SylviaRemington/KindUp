@@ -10,6 +10,55 @@
   </head>
   <body>
 
+    <!-- Bulma Inspired Sign In Page -->
+
+      <section class="section">
+      <div class="container">
+        <h1 class="title has-text-centered">Sign In</h1>
+
+        <form action="/auth/sign-in" method="POST" class="box" style="max-width: 400px; margin: 0 auto;">
+          <div class="field">
+            <label class="label" for="username">Username</label>
+            <div class="control">
+              <input class="input" type="text" name="username" id="username" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="password">Password</label>
+            <div class="control">
+              <input class="input" type="password" name="password" id="password" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <button class="button is-info is-fullwidth" type="submit">Sign In</button>
+            </div>
+          </div>
+        </form>
+
+        <br>
+
+        <div class="has-text-centered">
+          <a href="/">⬅︎ Back to Homepage</a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Original Sign In Page -->
     <h1>Sign In</h1>
 
     <form action="/auth/sign-in" method="POST">
