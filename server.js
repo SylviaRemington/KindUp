@@ -2,7 +2,7 @@
 // Note to self: Added basic CRUD functionality & basic signin/signup auth functionality
 // Note to self: Create a user relationship (connecting user to comment) - with mongoose relationships & used referencing/reference relationship since it's better long term than embedded.
 // Note to self: Added middleware to stay signed in.
-// ! Still need to add css to app for basic MVP
+// Note to self: Added basic styling via Bulma for KindUp App - though would like to explore a lot more styling possibilities.
 // ! Still need to deploy online
 // ! Still need to add the following to my README:
 /* 
