@@ -7,6 +7,73 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
+
+    <section class="section">
+  <div class="container" style="max-width: 700px; margin: 0 auto;">
+
+    <!-- Page Title -->
+    <h1 class="title has-text-info has-text-centered mb-5">Create A New Kind Act</h1>
+
+    <!-- Success Message -->
+    <% if (typeof success !== 'undefined' && success) { %>
+      <p class="notification is-success has-text-centered">✅ Complete! Your kind act was created!</p>
+    <% } %>
+
+    <!-- Kind Act Form -->
+    <form action="/kindacts" method="POST" class="box">
+      <!-- Title -->
+      <div class="field">
+        <label class="label" for="title">Title</label>
+        <div class="control">
+          <input class="input" type="text" name="title" id="title" required>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="field">
+        <label class="label" for="description">Description</label>
+        <div class="control">
+          <input class="input" type="text" name="description" id="description" required>
+        </div>
+      </div>
+
+      <!-- Tested Checkbox -->
+      <div class="field">
+        <label class="checkbox">
+          <input type="checkbox" name="isTestedRandomActOfKindness">
+          Is a tested Random Act Of Kindness?
+        </label>
+      </div>
+
+      <!-- Brand New Checkbox -->
+      <div class="field">
+        <label class="checkbox">
+          <input type="checkbox" name="isBrandNew" id="isBrandNew">
+          Is brand new?
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="field">
+        <div class="control has-text-centered">
+          <button class="button is-info mt-3" type="submit">Add Kind Act</button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Back Links -->
+    <div class="has-text-centered mt-5">
+      <a href="/kindacts" class="button is-info is-light mb-2">⬅︎ Let's Check Out All Kind Acts! Woot Woot!</a><br>
+      <a href="/" class="button is-link is-light">⬅︎ Back to Homepage</a>
+    </div>
+
+  </div>
+</section>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Original NEW.EJS before styling -->
     <h1>Create A New Kind Act</h1>
 
     <!-- Creating a function for the form once it's completed for better user interaction-->
