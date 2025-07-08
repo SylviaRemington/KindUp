@@ -47,6 +47,7 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 - **express-session** - for user-login sessions / manages user-login sessions
 - **bcrypt** - for password encryting / securely encrypts passwords for storage & comparison
 - **connect-flash** - creates success alerts for better user experience once they sign-up or sign-in
+- **Bulma** - css library which provides css classes & helps style my html code... yay!
 
 
 ## Setup & Installation Requirements
