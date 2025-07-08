@@ -1,3 +1,5 @@
+/* ORIGINALLY STARTED CODING WITH CSS - BUT SWITCHING TO BULMA FOR MORE EASE AT STYLING */
+
 /* * {
     margin: 0;
     padding: 0;
@@ -13,8 +15,8 @@ FOR FURTHER INFO ON STYLING THIS CONTENT.
 
 
 /* Not currently working - need to figure out why */
-button {
+/* button {
     display: flex;
     flex-direction: row;
-}
+} */
 
