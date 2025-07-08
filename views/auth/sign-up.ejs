@@ -10,8 +10,51 @@
   </head>
   <body>
 
-    <!-- <nav><ul><li><a href="/">Home</a></li></ul></nav> -->
+    <!-- Bulma Styling Sign Up Page -->
+    <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered">Create a new account!</h1>
 
+      <form action="/auth/sign-up" method="POST" class="box" style="max-width: 400px; margin: 0 auto;">
+        <div class="field">
+          <label class="label" for="username">Username:</label>
+          <div class="control">
+            <input class="input" type="text" name="username" id="username" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="password">Password:</label>
+          <div class="control">
+            <input class="input" type="password" name="password" id="password" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" for="confirmPassword">Confirm Password:</label>
+          <div class="control">
+            <input class="input" type="password" name="confirmPassword" id="confirmPassword" required />
+          </div>
+        </div>
+
+        <div class="field mt-4">
+          <div class="control">
+            <button class="button is-info is-fullwidth" type="submit">New User - Sign up</button>
+          </div>
+        </div>
+      </form>
+
+      <div class="has-text-centered mt-4">
+        <a href="/">⬅︎ Back to Homepage</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+    <!-- Original Sign Up Page Code -->
     <h1>Create a new account!</h1>
 
     <form action="/auth/sign-up" method="POST">
