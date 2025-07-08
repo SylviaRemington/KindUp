@@ -95,6 +95,7 @@ KindUp is a full-stack web app that encourages users to spread positivity throug
 - Also, would like to add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it.)
 - Add timestamp to Comments Section as well.
 - Add Instructions Link
+- Create 'like' functionality with a button or something else that works
 
 #### Known Bugs:
 - 
