@@ -58,7 +58,7 @@ router.post("/sign-up", async (req, res) => {
     const user = await User.create(req.body);
     // res.send(`Thanks for signing up ${user.username}!`);
     // res.redirect('/'); //! can I first get a confirmation message and then redirect? How do I do that?
-    res.redirect('/'); 
+    res.redirect('/kindacts'); 
 });
 
 // SIGN-IN ROUTE
