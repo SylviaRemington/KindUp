@@ -6,14 +6,14 @@
 <!-- Bulma Nav Bar with styling & added classes -->
  <!-- I like is-info (teal/cyan) for the color /  -->
 <nav class="navbar is-info" role="navigation" aria-label="main navigation">
-  <div class="navbar-menu is-active">
+  <div class="container is-flex is-justify-content-center">
     <div class="navbar-start">
       <% if (user) { %>
-        <a class="navbar-item">Hi, <%= user.username %>!</a>
-        <a class="navbar-item" href="/kindacts">Browse Kind Acts</a>
-        <a class="navbar-item" href="/kindacts/new">Add New Kind Act</a>
-        <a class="navbar-item" href="/vip-lounge">Get into the VIP Users Only lounge!</a>
-        <a class="navbar-item" href="/auth/sign-out">Sign Out</a>
+        <a class="navbar-item mx-1">Hi, <%= user.username %>!</a>
+        <a class="navbar-item mx-6" href="/kindacts">Browse Kind Acts</a>
+        <a class="navbar-item mx-6" href="/kindacts/new">Add New Kind Act</a>
+        <a class="navbar-item mx-6" href="/vip-lounge">Get into the VIP Users Only lounge!</a>
+        <a class="navbar-item mx-6" href="/auth/sign-out">Sign Out</a>
       <% } else { %>
         <a class="navbar-item" href="/auth/sign-up">Sign Up</a>
         <a class="navbar-item" href="/auth/sign-in">Sign In</a>
