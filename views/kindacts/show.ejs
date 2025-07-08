@@ -13,6 +13,98 @@
 </head>
 <body>
 
+    <!-- BULMA INSPIRED CODE -->
+
+    <section class="section">
+    <div class="container" style="max-width: 700px; margin: 0 auto;">
+
+      <!-- Kind Act Title -->
+      <h1 class="title has-text-info has-text-centered mb-4"><%= kindact.title %></h1>
+
+      <!-- Success Message -->
+      <% if (typeof success !== 'undefined' && success) { %>
+        <p class="notification is-success has-text-centered">✅ Kind Act successfully updated!</p>
+      <% } %>
+
+      <!-- Checkbox Impact Message -->
+      <% if (kindact.isTestedRandomActOfKindness) { %>
+        <p class="has-text-centered has-text-weight-semibold has-text-is-dark mb-4">
+          This Kind Act has been tested and makes a positive impact! Give it a try!
+        </p>
+      <% } else { %>
+        <p class="has-text-centered has-text-is-dark mb-4">
+          This one's untested... But you could be the first to spark change!
+        </p>
+      <% } %>
+
+      <!-- Edit & Delete Buttons Side by Side -->
+      <div class="buttons is-centered mb-5">
+        <form action="/kindacts/<%= kindact._id %>/edit" method="GET">
+          <button class="button is-info" type="submit">Edit <%= kindact.title %></button>
+        </form>
+
+        <form id="delete-form" action="/kindacts/<%= kindact._id %>?_method=DELETE" method="POST">
+          <button class="button is-dark" type="submit">Delete <%= kindact.title %></button>
+        </form>
+      </div>
+
+      <!-- Comment Form -->
+      <div class="box">
+        <h3 class="subtitle has-text-centered has-text-weight-bold mb-3">
+          Leave A Comment About Your Experience <br>with this KindAct and/or any comment!
+        </h3>
+        <form action="/comments" method="POST">
+          <input type="hidden" name="kindactId" value="<%= kindact._id %>">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" name="text" placeholder="Write your comment..." required></textarea>
+            </div>
+          </div>
+          <div class="has-text-centered">
+            <button class="button is-info mt-2" type="submit">Post Comment</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Display Comments -->
+      <div class="box">
+        <h3 class="subtitle has-text-centered has-text-weight-bold mb-3">Comments:</h3>
+        <% if (kindact.comments && kindact.comments.length > 0) { %>
+          <ul>
+            <% kindact.comments.forEach(comment => { %>
+              <li class="mb-2">
+                <strong><%= comment.user.username %>:</strong> <%= comment.text %>
+              </li>
+            <% }); %>
+          </ul>
+        <% } else { %>
+          <p class="has-text-centered">No comments yet. Be the first supahstaaaar to write a comment!</p>
+        <% } %>
+      </div>
+
+      <!-- Back Links -->
+      <div class="has-text-centered mt-5">
+        <a href="/kindacts" class="button is-info is-light mb-2">⬅︎ Let's Check Out More Kind Acts! Woot Woot!</a><br>
+        <a href="/" class="button is-link is-light">⬅︎ Back to Homepage</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
+    <!-- ORIGINAL CODE -->
     <h1><%= kindact.title %></h1> 
 
     <!-- Creating message/function so that once updated, page will show message for better UI -->
