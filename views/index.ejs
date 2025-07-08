@@ -17,17 +17,14 @@
 <!-- Sign-in creates connect.sid cookies in dev tools. SID = session id. It remembers who you are between webpages-->
     <!-- If user exists -->
     <% if (user) { %>
-        <!-- then render this -->
-        <h1>Welcome to the KindUp Movement, <%= user.username %>!</h1>
-        <p>...welcome information here... and a paragraph about exploring through the app...</p>
+        <section class="section">
+            <div class="container has-text-centered">
+            <!-- then render this -->
+            <h1 class="title is-3 has-text-info">Welcome to the KindUp Movement, <%= user.username %>!</h1>
+            <p>...welcome information here... and a paragraph about exploring through the app...</p>
 
-        <br>
+            <br>
 
-        <!-- <p>
-            new sign out link
-            Maybe take this link out since just added it in nav bar
-            <a href="/auth/sign-out">Sign out</a>
-        </p> -->
 
     <% } else { %>
         <section class="section">
@@ -134,7 +131,7 @@
     <% if (user) { %>
     <!-- <h2>Sign up to be part of the KindUp Movement!</h2> -->
     <!-- <p>Each day is amazing 'cause you have the chance to be kind and add more fun & joy & hope into life.</p> -->
-    <p class="has-text-weight-bold">Each day is amazing 'cause you have the chance to be kind and add more fun & joy to other people's lives.</p>
+    <p class="title is-5 has-text-centered has-text-weight-semibold">Each day is amazing 'cause you have the chance to be kind and add more fun & joy to other people's lives.</p>
     <% } else { %>
         <h2 class="title is-3 has-text-centered has-text-weight-semibold mb-1">Sign up to be part of the KindUp Movement!</h2>
         <br>
