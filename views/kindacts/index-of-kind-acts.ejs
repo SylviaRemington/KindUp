@@ -20,12 +20,12 @@
                 <strong>Click on a kind act to read about it or update/delete a kind act you've created!</strong>
             </p>
 
-                <ul class="box">
-            <% kindacts.forEach(kindact => { %>
-                <li class="mb-2">
-                <a href="/kindacts/<%= kindact._id %>" class="has-text-link"><%= kindact.title %></a>
-                </li>
-            <% }); %>
+            <ul class="box has-text-centered">
+                <% kindacts.forEach(kindact => { %>
+                    <li class="mb-2">
+                        <a href="/kindacts/<%= kindact._id %>" class="has-text-link"><%= kindact.title %></a>
+                    </li>
+                <% }); %>
             </ul>
             
 
