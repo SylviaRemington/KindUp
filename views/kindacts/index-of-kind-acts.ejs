@@ -9,7 +9,36 @@
     <title>Index of Kind Acts</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
+    <section class="section">
+        <div class="container" style="max-width: 700px; margin: 0 auto;">
+            
+            <h1 class="title has-text-centered">All Kind Acts</h1>
+            
+            <p class="has-text-centered mb-4">
+                <strong>Click on a kind act to read about it or update/delete a kind act you've created!</strong>
+            </p>
+
+            <ul class="box">
+                <% kindacts.forEach(kindact => { %>
+                    <li class="mb-2">
+                        <a href="/kindacts/<%= kindact._id %>" class="has-text-link"><%= kindact.title %></a>
+                    </li>
+                <% }); %>
+            </ul>  
+
+        <div class="mt-5 has-text-centered">
+            <a href="/kindacts/new" class="button is-info is-light mb-2">Add New Kind Act</a><br>
+            <a href="/" class="button is-link is-light">⬅︎ Back to Homepage</a>
+        </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OLDER CODE BEFORE BULMA STYLING -->
     <h1>All Kind Acts</h1>
     <p><b>Click on a kind act to read about it or update/delete a kind act you've created!</b><p>
 
