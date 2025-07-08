@@ -20,3 +20,31 @@ FOR FURTHER INFO ON STYLING THIS CONTENT.
     flex-direction: row;
 } */
 
+.kindacts-bg {
+  background-image: url('/images/kindacts-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Overlay to darken the background */
+.kindacts-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* darker layer */
+  z-index: 1;
+}
+
+/* This keeps the text above the overlay */
+.kindacts-content {
+  position: relative;
+  z-index: 2;
+}
+
