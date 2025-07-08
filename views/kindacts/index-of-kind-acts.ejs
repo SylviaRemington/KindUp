@@ -38,22 +38,5 @@
     </section>
 
 
-    <!-- OLDER CODE BEFORE BULMA STYLING -->
-    <h1>All Kind Acts</h1>
-    <p><b>Click on a kind act to read about it or update/delete a kind act you've created!</b><p>
-
-    <ul>
-        <% kindacts.forEach(kindact => { %>
-            <li><a href="/kindacts/<%= kindact._id %>"><%= kindact.title %></a></li>
-            <!-- adding dynamic link above for showpage -->
-        <% }); %>
-    </ul>  
-    
-    <br>
-
-    <!-- LINKS TO APP PAGES -->
-    <a href="/kindacts/new">⬅︎ Add New Kind Act</a> <br>
-    <a href="/">⬅︎ Back to Homepage</a>
-
 </body>
 </html>
