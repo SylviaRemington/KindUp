@@ -2,6 +2,26 @@
 
 <!-- My version that might work - saving and then tweaking it -->
 
+
+<!-- Bulma Nav Bar with styling & added classes -->
+<nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-menu is-active">
+    <div class="navbar-start">
+      <% if (user) { %>
+        <a class="navbar-item">Hi, <%= user.username %>!</a>
+        <a class="navbar-item" href="/kindacts">Browse Kind Acts</a>
+        <a class="navbar-item" href="/kindacts/new">Add New Kind Act</a>
+        <a class="navbar-item" href="/vip-lounge">Get into the VIP Users Only lounge!</a>
+        <a class="navbar-item" href="/auth/sign-out">Sign Out</a>
+      <% } else { %>
+        <a class="navbar-item" href="/auth/sign-up">Sign Up</a>
+        <a class="navbar-item" href="/auth/sign-in">Sign In</a>
+      <% } %>
+    </div>
+  </div>
+</nav>
+
+
 <!-- Original Nav Bar Code Below Before I change it with Bulma -->
 <nav>
   <% if (user) { %>
