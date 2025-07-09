@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +12,17 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
 </head>
+
 <body>
 
-    <!-- BULMA INSPIRED CODE -->
-
+    <!-- CODE WITH BULMA STYLING -->
     <section class="section">
     <div class="container" style="max-width: 700px; margin: 0 auto;">
 
       <!-- Kind Act Title -->
       <h1 class="title has-text-info has-text-centered mb-4"><%= kindact.title %></h1>
 
-      <!-- Description Message - Currently with placeholder text for testing -->
+      <!-- Description String - Currently with placeholder text for testing / can also create a div around the p tags & style the div instead 1 time instead of styling both p tags. -->
       <p class="has-text-centered">Placeholder text about this kind act. Testing.</p>
       <p class="has-text-centered mb-4">loremipsum placeholder text generator...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui porta, mollis massa nec, pretium sem. Sed lacinia, ex id lacinia laoreet, quam mi commodo tortor, vitae maximus quam nibh in arcu. Vivamus posuere, lorem nec congue viverra, lectus dolor elementum mauris, sed molestie lectus purus a augue. Sed volutpat nunc hendrerit eros rhoncus interdum vel a elit. Pellentesque rhoncus faucibus sagittis.</p>
 
@@ -30,7 +31,7 @@
         <p class="notification is-success has-text-centered">✅ Kind Act successfully updated!</p>
       <% } %>
 
-      <!-- Checkbox Impact Message -->
+      <!-- Checkbox Tested or Untested Message -->
       <% if (kindact.isTestedRandomActOfKindness) { %>
         <p class="has-text-centered has-text-weight-semibold has-text-is-dark mb-5">
           This Kind Act has been tested and makes a positive impact! Give it a try!
@@ -70,7 +71,7 @@
         </form>
       </div>
 
-      <!-- Display Comments -->
+      <!-- Display Comments after submission of Comment Form -->
       <div class="box">
         <h3 class="subtitle has-text-centered has-text-weight-bold mb-3">Comments:</h3>
         <% if (kindact.comments && kindact.comments.length > 0) { %>
@@ -86,7 +87,7 @@
         <% } %>
       </div>
 
-      <!-- Back Links -->
+      <!-- Back Links to other pages -->
       <div class="has-text-centered mt-5">
         <a href="/kindacts" class="button is-info is-light mb-2">⬅︎ Let's Check Out More Kind Acts! Woot Woot!</a><br>
         <a href="/" class="button is-link is-light">⬅︎ Back to Homepage</a>
@@ -94,7 +95,7 @@
 
     </div>
   </section>
-  <!-- See original code below and closing tags below - keeping for comparison in the future so that when I come back to this code for reference (for future apps). -->
+  <!-- See original code below and closing tags further below - keeping for comparison in the future so that when I come back to this code for reference (for future apps). -->
 
 
 
@@ -108,7 +109,7 @@
 
 
   <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
-    <!-- ORIGINAL CODE -->
+    <!-- ORIGINAL CODE BEFORE BULMA STYLING -->
     <!-- I'm currently keeping this code below so that I can use it for reference. -->
     <!-- Obviously, I will delete it when I deploy the app. I may create a second git repo with just code for better submission for my project #2. -->
     <h1><%= kindact.title %></h1> 
