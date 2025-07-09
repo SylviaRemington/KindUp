@@ -4,45 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
 
-    <!-- ! Still need to add styling to this page -->
     <!-- Editing Section of App WITH Bulma Styling -->
 
     <section class="section">
         <div class="container" style="max-width: 700px; margin: 0 auto;">
+
+            <!-- Success Message after Update -->
+            <% if (typeof success !== 'undefined' && success) { %>
+                <p class="notification is-success has-text-centered">✅ Kind Act successfully updated!</p>
+            <% } %>
             
             <!-- Title of Kind Act -->
-            <h1>Edit <%= kindact.title %></h1> 
+            <h1 class="title has-text-info has-text-centered mb-5">Edit <%= kindact.title %></h1> 
             
             <!-- Title & Description Edit Section -->
-            <form action="/kindacts/<%= kindact._id %>?_method=PUT" method="POST">
-                <label for="title">Title:</label>
-                <input type="text" name="title" id="title" value="<%= kindact.title %>"><br><br>
+            <form action="/kindacts/<%= kindact._id %>?_method=PUT" method="POST" class="box">
+
+                <!-- Title -->
+                <div class="field">
+                    <label class="label" for="title">Title</label>
+                    <div class="control">
+                        <input class="input" type="text" name="title" id="title" value="<%= kindact.title %>" required>
+                    </div>
+                </div>
                 
-                <label for="description">Description:</label>
-                <input type="text" name="description" id="description" value="<%= kindact.description %>"><br><br>
-                
+                <!-- Description -->
+                <div class="field">
+                    <label class="label" for="description">Description</label>
+                    <div class="control">
+                        <input class="input" type="text" name="description" id="description" value="<%= kindact.description %>" required>
+                    </div>
+                </div>
+
                 <!-- Is a tested Random Act Of Kindness? -->
-                <label for="isTestedRandomActOfKindness">Is a tested Random Act Of Kindness?</label>
-                <input type="checkbox" name="isTestedRandomActOfKindness" id="Is a tested Random Act Of Kindness?" <% if(kindact.isTestedRandomActOfKindness) { %>checked<% } %> ><br><br>
-                
+                <div class="field">
+                    <label class="checkbox">
+                    <input type="checkbox" name="isTestedRandomActOfKindness" <% if(kindact.isTestedRandomActOfKindness) { %>checked<% } %> >
+                    Is a tested Random Act Of Kindness?
+                    </label>
+                </div>
+
                 <!-- Is a brand new, first time Random Act Of Kindness? -->
-                <label for="isBrandNew">Is brand new?</label>
-                <input type="checkbox" name="isBrandNew" id="isBrandNew" <% if(kindact.isBrandNew) { %>checked<% } %> ><br><br>
-                
-                <button type="submit">Update Kind Act</button>
+                <div class="field">
+                    <label class="checkbox">
+                    <input type="checkbox" name="isBrandNew" <% if(kindact.isBrandNew) { %>checked<% } %> >
+                    Is brand new?
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="field">
+                    <div class="control has-text-centered">
+                    <button class="button is-info mt-3" type="submit">Update Kind Act</button>
+                    </div>
+                </div>
             
             </form>
             
             
-            <br><br>
-            
-            <!-- LINKS TO APP PAGES -->
-            <a href="/kindacts">⬅︎ Back to Kind Acts!</a> <br>
-            <a href="/">⬅︎ Back to Homepage</a>
+                <!-- LINKS TO APP PAGES -->
+                <div class="has-text-centered mt-5">
+                    <a href="/kindacts" class="button is-info is-light mb-2">⬅︎ Back to Kind Acts</a><br>
+                    <a href="/" class="button is-link is-light">⬅︎ Back to Homepage</a>
+                </div>
         
         </div>
     </section>
