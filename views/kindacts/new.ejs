@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Kind Act</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
+
 <body>
 
-    <section class="section">
-  <div class="container" style="max-width: 700px; margin: 0 auto;">
+  <!-- The first line below is a Bulma layout helper & adds vertical spacing/padding above and below the content. -->
+  <section class="section"> 
+    <!-- Container centers content horizontally, also limiting width, and horizontally centering box inside the page -->
+    <div class="container" style="max-width: 700px; margin: 0 auto;">
 
     <!-- Page Title -->
     <h1 class="title has-text-info has-text-centered mb-5">Create A New Kind Act</h1>
@@ -33,6 +37,7 @@
       <div class="field">
         <label class="label" for="description">Description</label>
         <div class="control">
+          <!-- ! Possibly can change this (below) to text-area (as per Purvi) so that there is the ability to make paragraphs for user. -->
           <input class="input" type="text" name="description" id="description" required>
         </div>
       </div>
@@ -61,7 +66,7 @@
       </div>
     </form>
 
-    <!-- Back Links -->
+    <!-- Back Links To Other Pages -->
     <div class="has-text-centered mt-5">
       <a href="/kindacts" class="button is-info is-light mb-2">⬅︎ Let's Check Out All Kind Acts! Woot Woot!</a><br>
       <a href="/" class="button is-link is-light">⬅︎ Back to Homepage</a>
@@ -73,10 +78,11 @@
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-    <!-- Original NEW.EJS before styling -->
+    <!-- Original NEW.EJS before styling / I'm keeping it in so that I can compare the two for future reference.-->
+    <!-- If I were to officially create this app as a real functioning app, I would take this code off from below. -->
     <h1>Create A New Kind Act</h1>
 
-    <!-- Creating a function for the form once it's completed for better user interaction-->
+    <!-- Creating a function for the form, so that once it's completed, will show a "success message" for better user interaction-->
     <% if (typeof success !== 'undefined' && success) { %>
         <p id="success-message" style="color: green;">✅ Complete! Your kind act was created!</p>
     <% } %>
@@ -107,17 +113,20 @@
     <a href="/">⬅︎ Back to Homepage</a>
 
 
-
+    <!-- ! SCRIPT TAG & FUNCTION FOR SUCCESS MESSAGE WITH A 3 SECOND TIMEOUT AFTER MESSAGE SHOWS UP ON THE PAGE -->
+    <!-- ! The timeout works when I don't have Bulma Styling in place. But doesn't with Bulma, not sure why. Need to research further. -->
     <!-- Script tags go after everything else because JS needs html elements to exist already before connecting to them. -->
     <!-- This script tag is to create a 3 second timeout after the success-message is put on the page so that it fades out. -->
     <script>
     const message = document.getElementById('success-message');
+    
     if (message) {
-    setTimeout(() => {
-      message.style.display = 'none';
-    }, 3000); // 3000 milliseconds = 3 seconds
-    }
+      setTimeout(() => {
+        message.style.display = 'none';
+      }, 3000); // 3000 milliseconds = 3 seconds
+    };
     </script>
 
 </body>
 </html>
+
