@@ -9,7 +9,49 @@
 <body>
 
     <!-- ! Still need to add styling to this page -->
-    <!-- Editing -->
+    <!-- Editing Section of App WITH Bulma Styling -->
+
+    <!-- Title of Kind Act -->
+    <h1>Edit <%= kindact.title %></h1> 
+
+    <form action="/kindacts/<%= kindact._id %>?_method=PUT" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="<%= kindact.title %>"><br><br>
+
+        <label for="description">Description:</label>
+        <input type="text" name="description" id="description" value="<%= kindact.description %>"><br><br>
+
+        <!-- Is a tested Random Act Of Kindness? -->
+         <label for="isTestedRandomActOfKindness">Is a tested Random Act Of Kindness?</label>
+         <input type="checkbox" name="isTestedRandomActOfKindness" id="Is a tested Random Act Of Kindness?" <% if(kindact.isTestedRandomActOfKindness) { %>checked<% } %> ><br><br>
+
+         <!-- Is a brand new, first time Random Act Of Kindness? -->
+        <label for="isBrandNew">Is brand new?</label>
+        <input type="checkbox" name="isBrandNew" id="isBrandNew" <% if(kindact.isBrandNew) { %>checked<% } %> ><br><br>
+
+        <button type="submit">Update Kind Act</button>
+    </form>
+
+    <br><br>
+
+
+    <!-- LINKS TO APP PAGES -->
+    <a href="/kindacts">⬅︎ Back to Kind Acts!</a> <br>
+    <a href="/">⬅︎ Back to Homepage</a>
+
+
+
+
+    
+
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <!-- ! Editing Section of App WITHOUT Bulma Styling - keeping for future reference and comparison-->
+
+    <!-- Title of Kind Act -->
     <h1>Edit <%= kindact.title %></h1> 
 
     <form action="/kindacts/<%= kindact._id %>?_method=PUT" method="POST">
