@@ -21,6 +21,10 @@
       <!-- Kind Act Title -->
       <h1 class="title has-text-info has-text-centered mb-4"><%= kindact.title %></h1>
 
+      <!-- Description Message - Currently with placeholder text for testing -->
+      <p class="has-text-centered">Placeholder text about this kind act. Testing.</p>
+      <p class="has-text-centered mb-4">loremipsum placeholder text generator...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae dui porta, mollis massa nec, pretium sem. Sed lacinia, ex id lacinia laoreet, quam mi commodo tortor, vitae maximus quam nibh in arcu. Vivamus posuere, lorem nec congue viverra, lectus dolor elementum mauris, sed molestie lectus purus a augue. Sed volutpat nunc hendrerit eros rhoncus interdum vel a elit. Pellentesque rhoncus faucibus sagittis.</p>
+
       <!-- Success Message -->
       <% if (typeof success !== 'undefined' && success) { %>
         <p class="notification is-success has-text-centered">✅ Kind Act successfully updated!</p>
@@ -28,7 +32,7 @@
 
       <!-- Checkbox Impact Message -->
       <% if (kindact.isTestedRandomActOfKindness) { %>
-        <p class="has-text-centered has-text-weight-semibold has-text-is-dark mb-4">
+        <p class="has-text-centered has-text-weight-semibold has-text-is-dark mb-5">
           This Kind Act has been tested and makes a positive impact! Give it a try!
         </p>
       <% } else { %>
@@ -38,7 +42,7 @@
       <% } %>
 
       <!-- Edit & Delete Buttons Side by Side -->
-      <div class="buttons is-centered mb-5">
+      <div class="buttons is-centered mb-6">
         <form action="/kindacts/<%= kindact._id %>/edit" method="GET">
           <button class="button is-info" type="submit">Edit <%= kindact.title %></button>
         </form>
@@ -90,7 +94,7 @@
 
     </div>
   </section>
-
+  <!-- See original code below and closing tags below - keeping for comparison in the future so that when I come back to this code for reference (for future apps). -->
 
 
 
@@ -105,6 +109,8 @@
 
   <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br>
     <!-- ORIGINAL CODE -->
+    <!-- I'm currently keeping this code below so that I can use it for reference. -->
+    <!-- Obviously, I will delete it when I deploy the app. I may create a second git repo with just code for better submission for my project #2. -->
     <h1><%= kindact.title %></h1> 
 
     <!-- Creating message/function so that once updated, page will show message for better UI -->
@@ -116,13 +122,14 @@
     <% if (kindact.isTestedRandomActOfKindness) { %>
         <p>This Kind Act has been tested and makes a positive impact! Give it a try!</p>
     <% } else { %>
-        <p>This one’s untested... But you could be the first to spark change!</p>
+        <p>This one's untested... But you could be the first to spark change!</p>
     <% } %>
 
     <br><br>
 
     <!-- ! Need CSS for (below) Edit & Delete Functionality Buttons to be side by side -->
 
+    <!-- ! EDIT FUNCTIONALITY - NEED TO ADD THIS TO NEW REPO FOR THIS APP & SHOWPAGE -->
     <!-- Edit Functionality -->
     <!-- Initially wrote a PUT method, but need a get method first to get to the page for editing. -->
      <form action="/kindacts/<%= kindact._id %>/edit" method="GET">
@@ -131,6 +138,7 @@
 
      <br>
 
+    <!-- ! DELETE FUNCTIONALITY - NEED TO ADD THIS TO NEW REPO FOR THIS APP & SHOWPAGE -->
     <!-- Delete Functionality -->
     <form id="delete-form" action="/kindacts/<%= kindact._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete <%= kindact.title %></button>
@@ -195,3 +203,4 @@
 
 </body>
 </html>
+
