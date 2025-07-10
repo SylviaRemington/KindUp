@@ -75,6 +75,8 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - [Bulma](https://bulma.io/) CSS framework for styling
 - Homepage screenshot taken using Mac OS built-in screenshot tool
 
+<br>
+
 # In Depth Planning Process
 ### If after the above generalized overview, you'd like more detailed information.
 
