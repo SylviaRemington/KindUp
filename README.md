@@ -110,6 +110,43 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - Trello Board link: TBA
 - ERD link: TBA
 
+#### Folder Structure
+➜  KindUp git:(main) ✗ tree -I "node_modules|.git|*.json|*.map" -a -L 3
+.
+├── .env
+├── .gitignore
+├── LICENSE.md
+├── README.md
+├── controllers
+│   ├── auth.js
+│   └── comment-actions.js
+├── middleware
+│   ├── is-signed-in.js
+│   └── pass-user-to-view.js
+├── models
+│   ├── Comment.js
+│   ├── KindAct.js
+│   ├── Like.js
+│   └── User.js
+├── public
+│   ├── css
+│   │   └── style.css
+│   └── images
+│       └── KindUp Homepage Screenshot.png
+├── server.js
+└── views
+    ├── auth
+    │   ├── sign-in.ejs
+    │   └── sign-up.ejs
+    ├── index.ejs
+    ├── kindacts
+    │   ├── edit.ejs
+    │   ├── index-of-kind-acts.ejs
+    │   ├── new.ejs
+    │   └── show.ejs
+    └── partials
+        └── _navbar.ejs
+
 #### Planning Process:
 1. Created ...(more info here)
 2. Flowchart above to understand order of operations
