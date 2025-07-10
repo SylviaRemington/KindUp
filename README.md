@@ -50,10 +50,11 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - **connect-flash** - creates success alerts for better user experience once they sign-up or sign-in
 - **Bulma** - css library which provides css classes & helps style my html code... yay!
 
-#### Next Steps & Stretch Goals:
+
+## Next Steps & Stretch Goals:
 - **Create 'like' functionality** with a button
 - **Add Instructions Link** and/or Page
-- **In Comment Section** - Add **timestamp** to Comments Section (in the Comment Model) with full functionality
+- **In Comment Section** - Add timestamp to Comments Section (in the Comment Model) with full functionality
 - **In Comment Section**  - Add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it and want to save along the way before they submit it.)
 - **In Comment Section**  - Making sure that commenting is fully functional and linked to user accounts (pretty sure this is completely done, but double check it). Edit/Delete features are planned as stretch goals.
 - **In Comment Section**  - Adding ability to edit and delete comments if the user has created their comment.
