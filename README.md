@@ -1,11 +1,11 @@
 ### MVP FOR README:
 (delete this MVP info once placed on README)
 #### README should have:
- - Screenshot or logo
- - Description of the app
+ - Screenshot or logo ✅ DONE!
+ - Description of the app ✅ DONE!
  - Link to deployed version + planning materials
  - Attribution if any
- - Technologies used 
+ - Technologies used ✅ DONE!
  - Next steps / stretch goals
 
 <br>
@@ -90,14 +90,21 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - 
 - 
 
-#### Stretch Goals:
-- Commenting is fully functional and linked to user accounts. Edit/Delete features are planned as stretch goals.
-- Adding specific timeout for session - Changing from Express defaults timeouts of sessions to my own / Would need to add that to 
-- Also, adding a pop-up to warn 5 minutes before session timeout
-- Also, would like to add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it.)
-- Add timestamp to Comments Section as well.
-- Add Instructions Link
-- Create 'like' functionality with a button or something else that works
+#### Next Steps & Stretch Goals:
+- Create 'like' functionality with a button
+- Add Instructions Link and/or Page
+- COMMENT SECTION - Add timestamp to Comments Section (in the Comment Model) with full functionality
+- COMMENT SECTION - Add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it and want to save along the way before they submit it.)
+- COMMENT SECTION - Making sure that commenting is fully functional and linked to user accounts (pretty sure this is completely done, but double check it). Edit/Delete features are planned as stretch goals.
+- COMMENT SECTION - Adding ability to edit and delete comments if the user has created their comment.
+- Adding Admin access - So that admin can have ability to view, add, edit, and delete all KindActs & all Comments.
+- Adding ability for users to add videos to their KindAct creations... and also add the ability to add videos in comments section if someone else has implemented this kind act and would like to share their experience with it.
+- Add specific timeout for total session - Changing from Express defaults timeouts of sessions to my own.
+- Also, adding a pop-up to warn 5 minutes before session timeout.
+
+
+
+
 
 #### Known Bugs:
 - 
