@@ -204,7 +204,7 @@ app.post('/kindacts', requireLogin, async (req, res) => {
   // Convert checkbox values to true/false
   req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
   req.body.isBrandNew = req.body.isBrandNew === 'on'; //request body is the data from the form
-  req.body.user = req.session/userId; //this stores the logged-in user's id & links the kindact to the user who created it
+  req.body.user = req.session.userId; //! this stores the logged-in user's id & links the kindact to the user who created it
   try {
     await KindAct.create(req.body); // saves to MongoDB
     res.render('kindacts/new.ejs', {success: true}); 
