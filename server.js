@@ -290,6 +290,7 @@ app.put('/kindacts/:kindactId', requireLogin, async (req, res) => {
   res.redirect(`/kindacts/${req.params.kindactId}?success=true`);
 });
 
+
 // ----------------------------------------------------------------------------------------
 
 // EDIT ROUTE - /kindacts/:kindactId/edit
