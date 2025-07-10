@@ -57,6 +57,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 <br>
 
 ## Next Steps & Stretch Goals:
+- **Accessibility** - need to figure out accessibility for videos and how to create that.
 - **Create 'like' functionality** with a button
 - **Add Instructions Link** and/or Page
 - **In Comment Section** - Add timestamp to Comments Section (in the Comment Model) with full functionality
