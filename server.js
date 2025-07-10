@@ -253,35 +253,42 @@ app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
   });
 });
 
+
 // DELETE ROUTE - on showpage
 app.delete('/kindacts/:kindactId', requireLogin, async (req, res) => {
-  // res.send("This is the delete route.");
-  const kindactId = req.params.kindactId;
-  await KindAct.findByIdAndDelete(kindactId);
+  const kindact = await KindAct.findById(req.params.kindactId);
+
+  // Checking if kindact.user exists AND matches session user
+  if (!kindact.user || !kindact.user.equals(req.session.user._id)) {
+    return res.status(403).send('Not authorized to delete this Kind Act.');
+  }
+
+  // This is where deleting the kind act happens
+  await KindAct.findByIdAndDelete(req.params.kindactId);
+
+  // Redirecting to index page of index-of-kind-acts.ejs
   res.redirect('/kindacts');
 });
 
+
 // PUT ROUTE - ON /KINDACTS/:KINDACTID 
 app.put('/kindacts/:kindactId', requireLogin, async (req, res) => {
-  if (req.body.isTestedRandomActOfKindness === 'on') {
-    req.body.isTestedRandomActOfKindness = true;
-  } else {
-    req.body.isTestedRandomActOfKindness = false;
+  const kindact = await KindAct.findById(req.params.kindactId);
+
+  // Checking if kindact.user exists first and also matches session user
+  if (!kindact.user || !kindact.user.equals(req.session.user._id)) {
+    return res.status(403).send('Not authorized to edit this Kind Act.');
   }
 
-  if (req.body.isBrandNew === 'on') {
-    req.body.isBrandNew = true;
-  } else {
-    req.body.isBrandNew = false;
-  }
+  req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
+  req.body.isBrandNew = req.body.isBrandNew === 'on';
 
+  // This is where updating the kindact happens
   await KindAct.findByIdAndUpdate(req.params.kindactId, req.body);
 
-  // adding query parameters so can redirect to message pop up that it was updated
+  // Redirecting with success message once updated
   res.redirect(`/kindacts/${req.params.kindactId}?success=true`);
-
 });
-
 
 // ----------------------------------------------------------------------------------------
 
@@ -355,6 +362,41 @@ Have a page of a comments section where you SHARE AN ACT OF KINDNESS you've witn
 
 
 // -----------------------------CODE GRAVEYARD---------------------------------------------
+
+/*
+
+THIS IS MY DELETE AND PUT ROUTES FROM ABOVE BEFORE I ADDED THE ADDTL FUNCTION THAT ONLY USERS ARE ALLOWED TO DELETE & EDIT THEIR KIND ACTS:
+
+DELETE ROUTE - on showpage
+app.delete('/kindacts/:kindactId', requireLogin, async (req, res) => {
+  res.send("This is the delete route.");/ THIS WAS COMMENTED OUT
+  const kindactId = req.params.kindactId;
+  await KindAct.findByIdAndDelete(kindactId);
+  res.redirect('/kindacts');
+});
+
+PUT ROUTE - ON /KINDACTS/:KINDACTID 
+app.put('/kindacts/:kindactId', requireLogin, async (req, res) => {
+  if (req.body.isTestedRandomActOfKindness === 'on') {
+    req.body.isTestedRandomActOfKindness = true;
+  } else {
+    req.body.isTestedRandomActOfKindness = false;
+  }
+
+  if (req.body.isBrandNew === 'on') {
+    req.body.isBrandNew = true;
+  } else {
+    req.body.isBrandNew = false;
+  }
+
+  await KindAct.findByIdAndUpdate(req.params.kindactId, req.body);
+
+  adding query parameters so can redirect to message pop up that it was updated
+  res.redirect(`/kindacts/${req.params.kindactId}?success=true`);
+
+});
+
+*/
 
 // CAN USE THIS BELOW INSTEAD OF WHAT I HAVE ABOVE IN THE FUTURE IF I WANT TO:
 // const port = process.env.PORT || 3000;
