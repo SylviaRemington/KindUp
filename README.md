@@ -3,7 +3,7 @@
 #### README should have:
  - Screenshot or logo ✅ DONE!
  - Description of the app ✅ DONE! 
- - Planning materials ✅ Partially done - need to add a few more links and details.
+ - Planning materials ✅ DONE!
  - Attribution if any ✅ DONE!
  - Technologies used ✅ DONE!
  - Next steps / stretch goals ✅ DONE!
