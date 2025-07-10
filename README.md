@@ -20,7 +20,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 ![KindUp Screenshot](https://raw.githubusercontent.com/SylviaRemington/KindUp/refs/heads/main/public/images/KindUp%20Homepage%20Screenshot.png)
 
-**Key Features:**
+## **Key Features:**
 
 - **KindAct Dashboard:** Logged-in users can create, read, update, and delete their own acts of kindness.
 
