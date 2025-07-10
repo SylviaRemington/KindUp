@@ -64,6 +64,19 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - **Add specific timeout for total session*** - Changing from Express defaults timeouts of sessions to my own.
 - **Also, adding a pop-up to warn 5 minutes before session timeout.**
 
+## Key Takeaways
+#### Challenges & Wins:
+#### Future Improvements:
+#### Other Random Thoughts About The Project:
+
+## Resources/Credits/Attribution
+- YouTube & Peter Sharp https://www.theliberators.org/social-experiments
+- YouTube & Peter Sharp https://www.petersharp.com.au/
+- [Bulma](https://bulma.io/) CSS framework for styling
+- Homepage screenshot taken using Mac OS built-in screenshot tool
+
+# In Depth Planning Process
+### If after the above generalized overview, you'd like more detailed information.
 
 ## Setup & Installation Requirements
 #### MVP Requirements for Application Project:
@@ -116,16 +129,8 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - 
 
 
-## Key Takeaways
-#### Challenges & Wins:
-#### Future Improvements:
-#### Other Random Thoughts About The Project:
 
-## Resources/Credits/Attribution
-- YouTube & Peter Sharp https://www.theliberators.org/social-experiments
-- YouTube & Peter Sharp https://www.petersharp.com.au/
-- [Bulma](https://bulma.io/) CSS framework for styling
-- Homepage screenshot taken using Mac OS built-in screenshot tool
+
 
 
 
