@@ -58,10 +58,10 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 ## Next Steps & Stretch Goals:
 - **Accessibility** - need to figure out accessibility for videos and how to create that.
-- **Create 'like' functionality** with a button
-- **Add Instructions Link** and/or Page
-- **In Comment Section** - Add timestamp to Comments Section (in the Comment Model) with full functionality
-- **In Comment Section**  - Add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it and want to save along the way before they submit it.)
+- **Create 'like' functionality** with a button.
+- **Add Instructions Link** and/or Page.
+- **In Comment Section** - Add timestamp to Comments Section (in the Comment Model) with full functionality.
+- **In Comment Section**  - Add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it and want to save along the way before they submit it.).
 - **In Comment Section**  - Making sure that commenting is fully functional and linked to user accounts (pretty sure this is completely done, but double check it). Edit/Delete features are planned as stretch goals.
 - **In Comment Section**  - Adding ability to edit and delete comments if the user has created their comment.
 - **Adding Admin access** - So that admin can have ability to view, add, edit, and delete all the Kind Acts and also this same ability with all Comments.
