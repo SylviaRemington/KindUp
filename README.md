@@ -62,7 +62,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - **Add Instructions Link** and/or Page.
 - **In Comment Section** - Add timestamp to Comments Section (in the Comment Model) with full functionality.
 - **In Comment Section**  - Add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it and want to save along the way before they submit it.).
-- **In Comment Section**  - Making sure that commenting is fully functional and linked to user accounts (pretty sure this is completely done, but double check it). Edit/Delete features are planned as stretch goals.
+- **In Comment Section**  - Making sure that commenting is fully functional & linked to user accounts (pretty sure this is completely done, but double check it). Edit/Delete features for comments are planned as stretch goals. Currently, only edit and delete functions for the Kind Acts. For now, when a user submits a comment, they won't have the ability to delete or edit it after submission. But will be doing that for next steps.
 - **In Comment Section**  - Adding ability to edit and delete comments if the user has created their comment.
 - **Adding Admin access** - So that admin can have ability to view, add, edit, and delete all the Kind Acts and also this same ability with all Comments.
 - **Adding ability for users to add videos** to their KindAct creations. And also, adding the ability for all users to add videos in the comments section in case a different user has implemented this kind act as well, and would like to share their experience with it.
