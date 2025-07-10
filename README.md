@@ -1,12 +1,12 @@
 ### MVP FOR README:
-(delete this MVP info once placed on README)
+
 #### README should have:
  - Screenshot or logo ✅ DONE!
  - Description of the app ✅ DONE!
  - Link to deployed version + planning materials
  - Attribution if any
  - Technologies used ✅ DONE!
- - Next steps / stretch goals
+ - Next steps / stretch goals ✅ DONE!
 
 <br>
 
