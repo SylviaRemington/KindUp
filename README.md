@@ -160,7 +160,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 ![KindUp Homepage](https://github.com/SylviaRemington/KindUp/blob/main/public/images/terminal%20tree%20with%20folder%20%26%20file%20breakdown.png)
 
-#### Planning Process:
+#### Planning Process - Stretch Goals to add all the additional information below:
 1. Created ...(more info here)
 2. Flowchart above to understand order of operations
 3. Mapped out Data Structure needed for card deck
