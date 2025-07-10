@@ -96,9 +96,10 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 ## Setup & Installation Requirements
 #### MVP Requirements for Application Project:
-- 
-- 
-- 
+- We had one full week to create a basic full stack app.
+- Project Requirements for this project can be found at this link: https://generalassembly.instructure.com/courses/720/pages/men-stack-crud-app-project-requirements?module_item_id=62910
+- Addtl Project Requirements Link with further details: https://generalassembly.instructure.com/courses/720/pages/men-stack-crud-app-project-requirements?module_item_id=62910
+
 #### Addtl Setup & Installation Requirements:
 - 
 - 
