@@ -67,7 +67,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 ## Key Takeaways
 #### Challenges & Wins:
 - **Wins:** Enthusiastic that I was able to create my first ever full stack web application! This is a big win for me.
-- **Challenges:** Learning and figuring out how the entire app interacts with one another. I found the most challenging part was linking all the routes and keeping track of how all the routes interact with one another. I think I'm still learning about this, and don't have full understanding of it yet. Also, adding authorization to protect routes, and seeing how it interacts with authentication was (and still is) a little bit confusing to me. I haven't fully grasped this and how it all works and interacts. Lastly, I'm still learning about Kanban boards and Trello. I don't have experience working with these; thus, I need to learn more about them in order to fully implement them in the future.
+- **Challenges:** Learning and figuring out how the entire app interacts with one another. I found the most challenging part was linking all the routes and keeping track of how all the routes interact with one another. I think I'm still learning about this, and don't have full understanding of it yet. Also, adding authorization to protect routes, and seeing how it interacts with authentication was (and still is) a little bit confusing to me. I haven't fully grasped this and how it all works and interacts. Lastly, I'm still learning about Kanban boards and Trello. I don't have experience working with these; thus, I need to learn more about them in order to fully implement them effectively in the future.
 
 #### Future Improvements:
 #### Other Random Thoughts About The Project: Squirrel!
