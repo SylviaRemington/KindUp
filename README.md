@@ -78,7 +78,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 <br>
 
 # In Depth Planning Process
-### If after the above generalized overview, you'd like more detailed information, please see the following below.
+#### If after the above generalized overview, you'd like more detailed information, please see the following below.
 
 ## Setup & Installation Requirements
 #### MVP Requirements for Application Project:
