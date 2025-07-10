@@ -8,7 +8,7 @@
  - Technologies used 
  - Next steps / stretch goals
 
- ![KindUp Screenshot] (https://raw.githubusercontent.com/SylviaRemington/KindUp/refs/heads/main/public/images/KindUp%20Homepage%20Screenshot.png)
+![KindUp Screenshot](https://raw.githubusercontent.com/SylviaRemington/KindUp/refs/heads/main/public/images/KindUp%20Homepage%20Screenshot.png)
 <br>
 
 # KindUp
