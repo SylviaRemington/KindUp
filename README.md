@@ -101,7 +101,16 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - Addtl Project Requirements Link with further details: https://generalassembly.instructure.com/courses/720/pages/men-stack-crud-app-project-requirements?module_item_id=62910
 
 #### Addtl Setup & Installation Requirements:
-- 
+- Basic installation of the following dependencies:     
+    "bcrypt": "^6.0.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.16.0",
+    "morgan": "^1.10.0"
 - 
 - 
 
