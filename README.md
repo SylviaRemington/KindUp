@@ -120,9 +120,11 @@ KindUp is a full-stack web application that encourages users to spread positivit
 #### Future Improvements:
 #### Other Random Thoughts About The Project:
 
-## Resources/Credits
-- https://www.theliberators.org/social-experiments
-- https://www.petersharp.com.au/
+## Resources/Credits/Attribution
+- YouTube & Peter Sharp https://www.theliberators.org/social-experiments
+- YouTube & Peter Sharp https://www.petersharp.com.au/
+- [Bulma](https://bulma.io/) CSS framework for styling
+- Homepage screenshot taken using Mac OS built-in screenshot tool
 
 
 
