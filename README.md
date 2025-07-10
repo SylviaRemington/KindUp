@@ -147,6 +147,9 @@ KindUp is a full-stack web application that encourages users to spread positivit
     └── partials
         └── _navbar.ejs
 
+** See Screenshot Below:
+![KindUp Homepage](https://github.com/SylviaRemington/KindUp/blob/main/public/images/terminal%20tree%20with%20folder%20%26%20file%20breakdown.png)
+
 #### Planning Process:
 1. Created ...(more info here)
 2. Flowchart above to understand order of operations
