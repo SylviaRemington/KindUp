@@ -59,7 +59,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - **In Comment Section**  - Add save functionality while writing comments (in case they are writing a lot about the KindAct or their experience with it and want to save along the way before they submit it.)
 - **In Comment Section**  - Making sure that commenting is fully functional and linked to user accounts (pretty sure this is completely done, but double check it). Edit/Delete features are planned as stretch goals.
 - **In Comment Section**  - Adding ability to edit and delete comments if the user has created their comment.
-- **Adding Admin access** - So that admin can have ability to view, add, edit, and delete all KindActs and all Comments.
+- **Adding Admin access** - So that admin can have ability to view, add, edit, and delete all the KindActs and all Comments.
 - **Adding ability for users to add videos** to their KindAct creations and adding the ability to add videos in the comments section if a different user has implemented this kind act as well, and would like to share their experience with it.
 - **Add specific timeout for total session*** - Changing from Express defaults timeouts of sessions to my own.
 - **Also, adding a pop-up to warn 5 minutes before session timeout.**
