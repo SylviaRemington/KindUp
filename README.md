@@ -8,7 +8,6 @@
  - Technologies used 
  - Next steps / stretch goals
 
-![KindUp Screenshot](https://raw.githubusercontent.com/SylviaRemington/KindUp/refs/heads/main/public/images/KindUp%20Homepage%20Screenshot.png)
 <br>
 
 # KindUp
@@ -18,6 +17,7 @@
 ## Welcome to the KindUp Movement!
 KindUp is a full-stack web app that encourages users to spread positivity through random acts of kindness. Users can create, view, edit, and delete their own kind acts, as well as comment on and like others’ contributions. The app uses MongoDB, Express, Node.js, and EJS, with authentication and user-specific features to build a meaningful, interactive experience.
 
+![KindUp Screenshot](https://raw.githubusercontent.com/SylviaRemington/KindUp/refs/heads/main/public/images/KindUp%20Homepage%20Screenshot.png)
 
 **Key Features:**
 
