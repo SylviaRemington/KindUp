@@ -20,6 +20,8 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 ![KindUp Screenshot](https://raw.githubusercontent.com/SylviaRemington/KindUp/refs/heads/main/public/images/KindUp%20Homepage%20Screenshot.png)
 
+<br>
+
 ## **Key Features:**
 
 - **KindAct Dashboard:** Logged-in users can create, read, update, and delete their own acts of kindness.
@@ -34,6 +36,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 - **Kindness Metadata:** Each act includes title, description, and custom checkboxes for unique kindness types - e.g. If the kind act is a tried-and-true-tested act or brand new, there will be a notation under the description of the kind act!
 
+<br>
 
 ## Tech Stack
 - **Node.js** - the backend runtime environment for running JavaScript on the server
@@ -51,6 +54,7 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - **connect-flash** - creates success alerts for better user experience once they sign-up or sign-in
 - **Bulma** - css library which provides css classes & helps style my html code... yay!
 
+<br>
 
 ## Next Steps & Stretch Goals:
 - **Create 'like' functionality** with a button
@@ -64,6 +68,8 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - **Add specific timeout for total session*** - Changing from Express defaults timeouts of sessions to my own.
 - **Also, adding a pop-up to warn 5 minutes before session timeout.**
 
+<br>
+
 ## Key Takeaways
 #### Challenges & Wins:
 - **Wins:** Enthusiastic that I was able to create my first ever full stack web application! This is a big win for me.
@@ -74,6 +80,8 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 #### Other Random Thoughts About The Project: Squirrel!
 - I really enjoyed creating this app. Even though app creation is so lengthy & time-consuming, it's so wonderful to be able to create a product/project that has the potential to help others. That's why I'm doing this... and it's exciting to learn with this long-term target in mind.
+
+<br>
 
 ## Resources/Credits/Attribution
 - YouTube & Peter Sharp https://www.theliberators.org/social-experiments
