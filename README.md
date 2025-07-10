@@ -112,13 +112,13 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 #### Folder Structure
 ➜  KindUp git:(main) ✗ tree -I "node_modules|.git|*.json|*.map" -a -L 3
-.
-├── .env
-├── .gitignore
-├── LICENSE.md
-├── README.md
-├── controllers
-│   ├── auth.js
+
+- ├── .env
+- ├── .gitignore
+- ├── LICENSE.md
+- ├── README.md
+- ├── controllers
+- │   ├── auth.js
 │   └── comment-actions.js
 ├── middleware
 │   ├── is-signed-in.js
