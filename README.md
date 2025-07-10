@@ -118,23 +118,23 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - ├── LICENSE.md
 - ├── README.md
 - ├── controllers
-- │   ├── auth.js
+│   ├── auth.js
 │   └── comment-actions.js
-├── middleware
+- ├── middleware
 │   ├── is-signed-in.js
 │   └── pass-user-to-view.js
-├── models
+- ├── models
 │   ├── Comment.js
 │   ├── KindAct.js
 │   ├── Like.js
 │   └── User.js
-├── public
+- ├── public
 │   ├── css
 │   │   └── style.css
 │   └── images
 │       └── KindUp Homepage Screenshot.png
-├── server.js
-└── views
+- ├── server.js
+- └── views
     ├── auth
     │   ├── sign-in.ejs
     │   └── sign-up.ejs
