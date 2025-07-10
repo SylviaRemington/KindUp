@@ -3,7 +3,7 @@
 #### README should have:
  - Screenshot or logo ✅ DONE!
  - Description of the app ✅ DONE! 
- - Planning materials
+ - Planning materials ✅ Partially done - need to add a few more links and details.
  - Attribution if any ✅ DONE!
  - Technologies used ✅ DONE!
  - Next steps / stretch goals ✅ DONE!
@@ -106,9 +106,9 @@ KindUp is a full-stack web application that encourages users to spread positivit
 
 ## Planning / Process / Ideas
 #### Early Concepts:
-- 
-- 
-- 
+- Project planning link: https://link.excalidraw.com/l/ArZSbb1GP9u/74hyTOpuWxt
+- Trello Board link: TBA
+- ERD link: TBA
 
 #### Planning Process:
 1. Created ...(more info here)
