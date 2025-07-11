@@ -249,7 +249,9 @@ app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
   // res.send(`This route renders the showpage for the Kind Act named: ${foundKindAct.title}.`);
   res.render('kindacts/show.ejs', { 
     kindact: foundKindAct, //getting all the data from the database to put into ejs file
-    success: req.query.success === 'true' //if url includes success message, then show success message from top of show.ejs page
+    success: req.query.success === 'true', //if url includes success message, then show success message from top of show.ejs page
+    user: req.session.user // gives my show.ejs page access to the person who is currently signed in. 
+    // I need to know who is signed in on my showpage so I can check if they are the one who created the kind act... This part is kind of confusing to me. I thought I already did this?
   });
 });
 
