@@ -113,8 +113,6 @@ KindUp is a full-stack web application that encourages users to spread positivit
     "method-override": "^3.0.0",
     "mongoose": "^8.16.0",
     "morgan": "^1.10.0"
-- 
-- 
 
 ## Planning / Process / Ideas
 #### Early Concepts:
