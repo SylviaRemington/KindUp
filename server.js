@@ -4,15 +4,6 @@
 // Note to self: Added middleware to stay signed in.
 // Note to self: Added basic styling via Bulma for KindUp App - though would like to explore a lot more styling possibilities.
 // ! Still need to deploy online
-// ! Still need to add the following to my README:
-/* 
-Screenshot/Logo: A screenshot of your app or a logo.
-Your app's name: Include a description of your app and its functionality. Background info about the app and why you built it is a nice touch.
-Getting Started: Includes a link to the deployed app and link to any planning materials.
-Attributions: This section should include links to any external resources (such as libraries or assets) you used to develop your application that require attribution. You can exclude this section if it does not apply to your application.
-Technologies Used: List of the technologies used, for example: JavaScript and any major frameworks or libraries.
-Next Steps: Planned future enhancements (stretch goals).
-*/
 // ! 1st Stretch Goal - connect-flash section - need to build this out so get success message after signup & sign in - e.g. "You've successfully signed up!" & "You've successfully signed in!"
 
 
@@ -107,9 +98,8 @@ app.use("/auth", authController); //invoke auth here / importing auth here / Thi
 app.use('/comments', commentController);
 
 
-// ! Creating using middleware, as per project requirements, "to restrict access to 
-// ! specific features (authorization), ensuring they are not accessible to anonymous users." // kinda confused about this part
-// ! DOUBLE CHECK IF DOING THIS PART CORRECTLY -- don't fully understand this below and why i need it (when I'm already logged in).
+// Creating using middleware, as per project requirements, "to restrict access to specific features (authorization), ensuring they are not accessible to anonymous users." // kinda confused about this part
+// DOUBLE CHECK IF DOING THIS PART CORRECTLY -- don't fully understand this below and why i need it (when I'm already logged in).
 // Creating a function that says you can't go to the page unless you're logged in.
 /* FURTHER EXPLANATION OF THIS: 
 “Make a function called isLoggedIn.
@@ -171,7 +161,7 @@ app.get('/', async (req, res) => {
 app.get("/vip-lounge", requireLogin, (req, res) => {
   if (req.session.user) {
     res.send(`Welcome to the Kind Movement Partaaay and VIP Lounge, ${req.session.user.username}! This is a place to share ideas & experiences as a VIP member!`);
-    // ! Need to build this out as a stretch goal if I have time.
+    // ! Need to build this (VIP LOUNGE) out as a stretch goal if I have time.
   } else {
     res.send("Sorry, no sign-in allowed. You aren't an existing user yet. But we'd love to have you!");
   }
@@ -242,7 +232,6 @@ app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
   // populate: { path: 'user' }: This goes, and for each comment, it also fetches the user document linked/connected to that comment.
   // From adding this populate function to my showroute, it now allows me to go to showpage at show.ejs and write <%= comment.user.username %>, because now user is loaded in system and available (and not just an id)
 
-
   // console.log(foundKindAct);
   // res.send(`This route renders the showpage for title: ${req.params.kindactId}.`);
   // res.send(`This route renders the showpage for the Kind Act named: ${foundKindAct.title}.`);
@@ -301,6 +290,8 @@ app.get('/kindacts/:kindactId/edit', requireLogin, async (req, res) => {
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
+
+
 
 
 
