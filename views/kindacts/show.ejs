@@ -44,8 +44,6 @@
       <% } %>
 
       <!-- Edit & Delete Buttons Side by Side -->
-      <!-- Adding this line of code below at line 48 so that the edit and delete buttons are only visible to the person who created the kind act... for better ui & so not confusing. -->
-      <% if (user && kindact.user && user._id.toString() === kindact.user.toString()) { %>
         <div class="buttons is-centered mb-6">
           <form action="/kindacts/<%= kindact._id %>/edit" method="GET">
             <button class="button is-info" type="submit">Edit <%= kindact.title %></button>
@@ -55,7 +53,7 @@
             <button class="button is-dark" type="submit">Delete <%= kindact.title %></button>
           </form>
         </div>
-      <% } %>
+
 
       <!-- Comment Form -->
       <div class="box">

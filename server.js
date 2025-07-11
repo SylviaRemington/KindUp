@@ -204,7 +204,6 @@ app.post('/kindacts', requireLogin, async (req, res) => {
   // Convert checkbox values to true/false
   req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
   req.body.isBrandNew = req.body.isBrandNew === 'on'; //request body is the data from the form
-  req.body.user = req.session.userId; //! this stores the logged-in user's id & links the kindact to the user who created it
   try {
     await KindAct.create(req.body); // saves to MongoDB
     res.render('kindacts/new.ejs', {success: true}); 
@@ -250,45 +249,36 @@ app.get('/kindacts/:kindactId', requireLogin, async (req, res) => {
   res.render('kindacts/show.ejs', { 
     kindact: foundKindAct, //getting all the data from the database to put into ejs file
     success: req.query.success === 'true', //if url includes success message, then show success message from top of show.ejs page
-    user: req.session.user // gives my show.ejs page access to the person who is currently signed in. 
-    // I need to know who is signed in on my showpage so I can check if they are the one who created the kind act... This part is kind of confusing to me. I thought I already did this?
   });
 });
 
 
 // DELETE ROUTE - on showpage
 app.delete('/kindacts/:kindactId', requireLogin, async (req, res) => {
-  const kindact = await KindAct.findById(req.params.kindactId);
-
-  // Checking if kindact.user exists AND matches session user
-  if (!kindact.user || !kindact.user.equals(req.session.user._id)) {
-    return res.status(403).send('Not authorized to delete this Kind Act.');
-  }
-
-  // This is where deleting the kind act happens
-  await KindAct.findByIdAndDelete(req.params.kindactId);
-
-  // Redirecting to index page of index-of-kind-acts.ejs
+  // res.send("This is the delete route.");
+  const kindactId = req.params.kindactId;
+  await KindAct.findByIdAndDelete(kindactId);
   res.redirect('/kindacts');
 });
 
 
 // PUT ROUTE - ON /KINDACTS/:KINDACTID 
 app.put('/kindacts/:kindactId', requireLogin, async (req, res) => {
-  const kindact = await KindAct.findById(req.params.kindactId);
-
-  // Checking if kindact.user exists first and also matches session user
-  if (!kindact.user || !kindact.user.equals(req.session.user._id)) {
-    return res.status(403).send('Not authorized to edit this Kind Act.');
+  if (req.body.isTestedRandomActOfKindness === 'on') {
+    req.body.isTestedRandomActOfKindness = true;
+  } else {
+    req.body.isTestedRandomActOfKindness = false;
   }
 
-  req.body.isTestedRandomActOfKindness = req.body.isTestedRandomActOfKindness === 'on';
-  req.body.isBrandNew = req.body.isBrandNew === 'on';
+  if (req.body.isBrandNew === 'on') {
+    req.body.isBrandNew = true;
+  } else {
+    req.body.isBrandNew = false;
+  }
 
-  // This is where updating the kindact happens
   await KindAct.findByIdAndUpdate(req.params.kindactId, req.body);
 
-  // Redirecting with success message once updated
+  // adding query parameters so can redirect to message pop up that it was updated
   res.redirect(`/kindacts/${req.params.kindactId}?success=true`);
 });
 
