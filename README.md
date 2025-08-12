@@ -1,16 +1,3 @@
-### MVP FOR README:
-
-#### README should have:
- - Screenshot or logo ✅ DONE!
- - Description of the app ✅ DONE! 
- - Planning materials ✅ DONE!
- - Attribution if any ✅ DONE!
- - Technologies used ✅ DONE!
- - Next steps / stretch goals ✅ DONE!
- - Link to deployed version - Tristan Hall will provide us with the GitHub education links.
-
-<br>
-
 # KindUp
 
 #### MEN Stack CRUD App - General Assembly Project 2 by Sylvia Remington
@@ -195,6 +182,18 @@ KindUp is a full-stack web application that encourages users to spread positivit
 - 
 
 
+### MVP FOR README:
+
+#### README should have:
+ - Screenshot or logo ✅ DONE!
+ - Description of the app ✅ DONE! 
+ - Planning materials ✅ DONE!
+ - Attribution if any ✅ DONE!
+ - Technologies used ✅ DONE!
+ - Next steps / stretch goals ✅ DONE!
+ - Link to deployed version - Tristan Hall will provide us with the GitHub education links.
+
+<br>
 
 
 
